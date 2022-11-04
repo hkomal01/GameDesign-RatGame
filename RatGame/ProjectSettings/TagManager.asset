@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Entities
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Solid
+  - Entities
   - 
   - 
   - 
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: SolidsBack
+    uniqueID: 1927710583
+    locked: 0
+  - name: Entities
+    uniqueID: 255925261
+    locked: 0
+  - name: SolidsFront
+    uniqueID: 1196280271
     locked: 0
