@@ -15,10 +15,10 @@ public class Player : Actor {
 
       // Listen for player input to move the object:
       void FixedUpdate(){
-            movement.x = Input.GetAxisRaw ("Horizontal");
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+            movement = movement.normalized;
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-
-            movement.y = Input.GetAxisRaw ("Vertical");
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+      
       }
 }
