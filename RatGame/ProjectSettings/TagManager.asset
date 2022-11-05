@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Entities
+  - Entity
+  - Enemies
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Solid
   - Entities
-  - 
+  - Pit
   - 
   - 
   - 
@@ -42,15 +43,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 1590817557
+    locked: 0
   - name: SolidsBack
-    uniqueID: 1927710583
+    uniqueID: 3011703131
     locked: 0
   - name: Entities
-    uniqueID: 255925261
+    uniqueID: 4011516335
+    locked: 0
+  - name: Guns
+    uniqueID: 3955126477
     locked: 0
   - name: SolidsFront
-    uniqueID: 1196280271
+    uniqueID: 2198852021
     locked: 0
-  - name: Doorways
-    uniqueID: 2651320931
+  - name: FX
+    uniqueID: 1900314263
+    locked: 0
+  - name: UI
+    uniqueID: 1768579969
     locked: 0
