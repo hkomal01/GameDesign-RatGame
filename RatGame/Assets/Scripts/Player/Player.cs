@@ -11,6 +11,7 @@ public class Player : Actor {
       // Auto-load the RigidBody component into the variable:
       void Start(){
             rb = GetComponent<Rigidbody2D> ();
+            rb.freezeRotation = true;
       }
 
       // Listen for player input to move the object:
