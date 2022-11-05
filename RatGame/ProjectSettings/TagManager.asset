@@ -51,3 +51,6 @@ TagManager:
   - name: SolidsFront
     uniqueID: 1196280271
     locked: 0
+  - name: Doorways
+    uniqueID: 2651320931
+    locked: 0
