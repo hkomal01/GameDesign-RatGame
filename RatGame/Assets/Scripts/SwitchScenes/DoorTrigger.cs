@@ -20,7 +20,7 @@ public class DoorTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             Debug.Log("enter new Scene");
-            string new_scene = "Level-1-1";
+            string new_scene = "Level-1-2";
             SceneManager.LoadScene(new_scene);
         }
     }
