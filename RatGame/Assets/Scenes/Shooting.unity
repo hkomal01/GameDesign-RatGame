@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1422052048187798, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514029141050018, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532908519911434, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4486379845780228, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -161,6 +173,10 @@ PrefabInstance:
     - target: {fileID: 4486379845780228, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212885528039705714, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212885528039705714, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -240,13 +256,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 1919761217627942, guid: d8d9f3807dc82234b8871e1fc5ae5b82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4996899542774176, guid: d8d9f3807dc82234b8871e1fc5ae5b82, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4996899542774176, guid: d8d9f3807dc82234b8871e1fc5ae5b82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.8
+      value: -643
       objectReference: {fileID: 0}
     - target: {fileID: 4996899542774176, guid: d8d9f3807dc82234b8871e1fc5ae5b82, type: 3}
       propertyPath: m_LocalPosition.y
@@ -415,6 +435,10 @@ PrefabInstance:
       propertyPath: SlimePrefab
       value: 
       objectReference: {fileID: 1927232248}
+    - target: {fileID: 114320815456894920, guid: 533581fecd94f8c4f991307ac29912a0, type: 3}
+      propertyPath: spawnAmount
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 533581fecd94f8c4f991307ac29912a0, type: 3}
 --- !u!1001 &1158048884
@@ -21017,6 +21041,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212659624997011260, guid: 21590a74d5f13ff40b8356f20f67f0e2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 48d5ebfe48e4e4befb9e5acfc3c58c1a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21590a74d5f13ff40b8356f20f67f0e2, type: 3}
 --- !u!1 &1927232248 stripped
