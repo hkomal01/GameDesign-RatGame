@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114801466048271246, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
+      propertyPath: casingPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 212885528039705714, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
       propertyPath: m_Enabled
       value: 1
