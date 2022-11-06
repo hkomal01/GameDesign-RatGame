@@ -1,21 +1,18 @@
 // a regular portal that teleports the player from A to B.
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
 public class DPortal : MonoBehaviour
 {
-    public Transform currdestination;
+    public GameObject portal;
+    public GameObject player;
 
-    void OnPortal(Player player)
-    {
-        //if (currdestination != null)
-            //transform.position = currdestination.GetComponent<Teleporter>().GetDestination.position;
+    void start() {
+        //player = GameObject.FindWithTag("Entity");
     }
 
-    void OnTriggerEnter2D(Collider2D co)
-    {
-        // if(collision.CompareTag("Teleporter")) {
-        //     currdestination = collision.gameObject();
-        // }
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.tag == "Entity") {
+            player.transform.position = new Vector2(portal.transform.position.x, portal.transform.position.y);
+        }
     }
 }
