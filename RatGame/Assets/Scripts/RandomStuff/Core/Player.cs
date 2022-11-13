@@ -225,29 +225,30 @@ public class Player : Actor {
 		var targetScale = Facing == Facings.Right ? new Vector3(1f,1f,1f) : new Vector3(-1f,1f,1f);
 		transform.localScale = targetScale;
 
-		// if (fsm.State == States.Dead) {
-		// 	if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Dead")) {
-		// 		Animator.Play ("Dead");
-		// 	}
-		// } else if (fsm.State == States.FallInPit) {
-		// 	if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Fall")) {
-		// 		Animator.Play ("Fall");
-		// 	}
-		// } else if (fsm.State == States.Roll) {
-		// 	if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Roll")) {
-		// 		Animator.Play ("Roll");
-		// 	}
-		// } else if (moveX == 0 && moveY == 0) {
-		// 	if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Idle") && 
-		// 		!Animator.GetCurrentAnimatorStateInfo (0).IsName ("TakeHit")) {
-		// 		Animator.Play ("Idle");
-		// 	}
-		// } else {
-		// 	if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Run") &&
-		// 		!Animator.GetCurrentAnimatorStateInfo (0).IsName ("TakeHit")) {
-		// 		Animator.Play ("Run");
-		// 	}
-		// }
+		if (fsm.State == States.Dead) {
+			if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Dead")) {
+				Animator.Play ("Dead");
+			}
+		} else if (fsm.State == States.FallInPit) {
+			if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Fall")) {
+				Animator.Play ("Fall");
+			}
+		} else if (fsm.State == States.Roll) {
+			if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Roll")) {
+				Animator.Play ("Roll");
+			}
+		} else if (moveX == 0 && moveY == 0) {
+			if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Idle") && 
+				!Animator.GetCurrentAnimatorStateInfo (0).IsName ("TakeHit")) {
+				Animator.Play ("Idle");
+			}
+		} else {
+			if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Run") &&
+				!Animator.GetCurrentAnimatorStateInfo (0).IsName ("TakeHit")) {
+				Animator.Play ("Run");
+			}
+		}
+	
 	}
 
 	public void UnEquipWeapon () {
