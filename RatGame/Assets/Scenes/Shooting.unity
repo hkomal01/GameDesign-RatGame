@@ -254,6 +254,10 @@ PrefabInstance:
       propertyPath: casingPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 212460162819327300, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 212885528039705714, guid: bfeb2c4bcf55d16499f54686d342c731, type: 3}
       propertyPath: m_FlipX
       value: 1
