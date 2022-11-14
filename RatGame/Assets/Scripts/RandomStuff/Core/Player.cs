@@ -93,10 +93,10 @@ public class Player : Actor {
 			fsm.ChangeState(States.FallInPit, StateTransition.Overwrite);
 		}
 
-		if (CanRoll) {
-			fsm.ChangeState (States.Roll, StateTransition.Overwrite);
-			return;
-		}
+		// if (CanRoll) {
+		// 	fsm.ChangeState (States.Roll, StateTransition.Overwrite);
+		// 	return;
+		// }
 
 		// Movement
 		Vector2 value = new Vector2(moveX, moveY);
