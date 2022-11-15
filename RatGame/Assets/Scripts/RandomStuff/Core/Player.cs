@@ -72,6 +72,10 @@ public class Player : Actor {
 	void Start () {
 		input = InputManager.instance;
 		fsm.ChangeState(States.Normal);
+
+		if (UIHeartsHealthBar.instance != null) {
+			UIHeartsHealthBar.instance.SetHearts ((int)PlayerPrefs.GetFloat("Health"));
+		}
 	}
 	
 	// Update is called once per frame
