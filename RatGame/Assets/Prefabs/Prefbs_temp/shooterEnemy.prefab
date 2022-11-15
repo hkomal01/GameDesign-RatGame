@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6908664199226586717}
   bulletPos: {fileID: 6908664198482137589}
+  bulletLife: 5
 --- !u!50 &6908664198114206445
 Rigidbody2D:
   serializedVersion: 4
@@ -207,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 6908664199226586717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.008894091, y: 0.008894091, z: 0}
+  m_LocalScale: {x: 1, y: 0.008894091, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6908664198114206446}

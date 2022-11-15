@@ -9,10 +9,12 @@ public class shooterOneScript : MonoBehaviour
     public float bulletLife = 5.0f;
 
     private float timer;
+    private GameObject clone;
     // Start is called before the first frame update
     void Start()
     {
-        bullet = Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        clone = Instantiate(bullet);
+        clone.gameObject.transform.localScale = new Vector2(1,1);
     }
 
     // Update is called once per frame
@@ -28,7 +30,7 @@ public class shooterOneScript : MonoBehaviour
 
     void shoot()
     {
-        GameObject clone = Instantiate(bullet, bulletPos.position, Quaternion.identity);
-        Destroy(clone, bulletLife);
+        GameObject fired = Instantiate(clone, bulletPos.position, Quaternion.identity);
+        Destroy(fired, bulletLife);
     }
 }
