@@ -2280,7 +2280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d70c5dec2de4311a99903f953e5654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  new_scene: Level-1-1
+  new_scene: Menu
 --- !u!66 &658568443
 CompositeCollider2D:
   m_ObjectHideFlags: 0
