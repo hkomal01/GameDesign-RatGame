@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,6 +94,18 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1323,11 +1335,11 @@ TextureImporter:
       MysticAcid_basics_PetricakeGames (2)_18: -1014385591
       MysticAcid_basics_PetricakeGames (2)_11: 569907385
       MysticAcid_basics_PetricakeGames (2)_37: 623908304
-      MysticAcid_basics_PetricakeGames (2)_0: 1706568349
-      MysticAcid_basics_PetricakeGames (2)_44: 1216787419
       MysticAcid_basics_PetricakeGames (2)_26: -682157096
-      MysticAcid_basics_PetricakeGames (2)_9: 106798270
+      MysticAcid_basics_PetricakeGames (2)_44: 1216787419
       MysticAcid_basics_PetricakeGames (2)_53: -551171339
+      MysticAcid_basics_PetricakeGames (2)_0: 1706568349
+      MysticAcid_basics_PetricakeGames (2)_9: 106798270
       MysticAcid_basics_PetricakeGames (2)_47: 415029760
       MysticAcid_basics_PetricakeGames (2)_43: 1047882562
       MysticAcid_basics_PetricakeGames (2)_30: 531426250
