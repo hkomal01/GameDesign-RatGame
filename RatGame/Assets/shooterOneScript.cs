@@ -14,6 +14,7 @@ public class shooterOneScript : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPos;
     public float bulletLife = 5.0f;
+    public float fireDelay;
 
     private float timer;
     private GameObject clone;
@@ -46,8 +47,8 @@ public class shooterOneScript : MonoBehaviour
         }
 
 
-        if(timer > 2){
-            timer = timer - 2;
+        if(timer > fireDelay){
+            timer = timer - fireDelay;
             shoot();
         }
     }
