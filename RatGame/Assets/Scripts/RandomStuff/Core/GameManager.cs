@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour {
 		}
 
 		Application.targetFrameRate = 60;
+		if (UIHeartsHealthBar.instance != null) {
+			UIHeartsHealthBar.instance.SetHearts ((int)PlayerPrefs.GetFloat("Health"));
+		}
 	}
 
 	void Update () {

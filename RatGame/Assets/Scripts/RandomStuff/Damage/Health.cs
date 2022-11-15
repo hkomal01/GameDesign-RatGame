@@ -94,6 +94,7 @@ public class Health : MonoBehaviour {
 	public void SetUIHealthBar () {
 		if (UIHeartsHealthBar.instance != null) {
 			UIHeartsHealthBar.instance.SetHearts (health);
+			PlayerPrefs.SetFloat("Health", health);
 		}
 	}
 }

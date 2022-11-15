@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
    public void PlayGame() {
 
-
-        SceneManager.LoadScene("Level-1-1");
+         PlayerPrefs.SetFloat("Health", 4);
+         SceneManager.LoadScene("Level-1-1");
    }
 }
