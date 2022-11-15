@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorTrigger : MonoBehaviour
 {
+    public string new_scene;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,9 @@ public class DoorTrigger : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == "Entity" && other.gameObject.name == "Player") {
             Debug.Log("enter new Scene");
-            string new_scene = "Level-1-2";
+            // string new_scene = "Level-1-3";
             SceneManager.LoadScene(new_scene);
         }
     }
