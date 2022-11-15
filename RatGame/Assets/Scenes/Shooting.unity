@@ -22040,11 +22040,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6880308950716425616, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.308
+      value: -0.002
       objectReference: {fileID: 0}
     - target: {fileID: 6880308950716425616, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.022
+      value: -0.005
       objectReference: {fileID: 0}
     - target: {fileID: 6880308950716425618, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: player
@@ -22100,6 +22100,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6880308950898482149, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880308950898482149, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: moveSpeed
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -7,16 +7,27 @@ public class shooterOneScript : MonoBehaviour
 {
     public static event Action<shooterOneScript> OnEnemyKilled;
     [SerializeField] float health, maxHealth = 3f;
+    [SerializeField] float moveSpeed = 5f;
+    Rigidbody2D rb;
+    Transform target;
+    Vector2 moveDirection;
     public GameObject bullet;
     public Transform bulletPos;
     public float bulletLife = 5.0f;
 
     private float timer;
     private GameObject clone;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        target = GameObject.FindGameObjectWithTag("Entity").transform;
         clone = Instantiate(bullet);
         clone.gameObject.transform.localScale = new Vector2(1,1);
         Destroy(bullet, 0);
@@ -27,9 +38,24 @@ public class shooterOneScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        if(target) {
+            Vector3 direction = (target.position - transform.position).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            rb.rotation = angle;
+            moveDirection = direction;
+        }
+
+
         if(timer > 2){
             timer = timer - 2;
             shoot();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if(target) {
+            rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
     }
 
