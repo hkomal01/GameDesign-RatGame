@@ -16,8 +16,8 @@ public class player1 : MonoBehaviour {
 
       // Listen for player input to move the object:
       void FixedUpdate(){
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
+            movement.x = Input.GetAxisRaw("Player0Horizontal");
+            movement.y = Input.GetAxisRaw("Player0Vertical");
             movement = movement.normalized;
             rb.MovePosition(rb.position + movement * moveSpeed);
       

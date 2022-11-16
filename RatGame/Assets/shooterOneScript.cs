@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using MonsterLove.StateMachine;
+//using MonsterLove.StateMachine;
 
-public class shooterOneScript : Actor
+public class shooterOneScript : MonoBehaviour
 {
     public UnityEvent onEnemyKilled;
     public UnityEvent OnTakeDamage;

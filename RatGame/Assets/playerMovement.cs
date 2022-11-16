@@ -21,8 +21,8 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
       // Left = -1, No keypress = 0, Right = 1
-      moveHorizontal = Input.GetAxisRaw("Horizontal");
-      moveVertical = Input.GetAxisRaw("Vertical");
+      moveHorizontal = Input.GetAxisRaw("Player0Horizontal");
+      moveVertical = Input.GetAxisRaw("Player0Vertical");
       
     }
 
