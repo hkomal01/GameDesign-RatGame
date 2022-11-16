@@ -22042,6 +22042,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3881439105322312401, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5648946607947072018, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: force
       value: 150
@@ -22050,6 +22054,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1861914346}
+    - target: {fileID: 5836669358301971510, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836669358301971510, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836669358301971510, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6044854910039248658, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: moveSpeed
       value: 20
@@ -22057,6 +22073,14 @@ PrefabInstance:
     - target: {fileID: 6044854910039248658, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: bulletLife
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6044854910039248658, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: solid_layer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6044854910039248658, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: entities_layer.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 6044854910039248658, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: OnTakeDamage.m_PersistentCalls.m_Calls.Array.size
@@ -22105,6 +22129,14 @@ PrefabInstance:
     - target: {fileID: 6073877083204294844, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
       propertyPath: m_Name
       value: shooterEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073877083204294844, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073877083620976177, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d92254b5deb7514e9d7913ba15ff45c, type: 3}

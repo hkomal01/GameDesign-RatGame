@@ -132,6 +132,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ee6b452313c9342bbbd7f2779c5b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onGround: 1
+  wasOnGround: 1
+  Speed: {x: 0, y: 0}
+  movementCounter: {x: 0, y: 0}
+  solid_layer:
+    serializedVersion: 2
+    m_Bits: 256
+  entities_layer:
+    serializedVersion: 2
+    m_Bits: 512
+  myCollider: {fileID: 0}
   onEnemyKilled:
     m_PersistentCalls:
       m_Calls:
@@ -186,9 +197,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &5836669358301971510
 BoxCollider2D:
