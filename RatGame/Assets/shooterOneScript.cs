@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class shooterOneScript : MonoBehaviour
 {
-    public static event Action<shooterOneScript> OnEnemyKilled;
+    public UnityEvent onEnemyKilled;
+    public UnityEvent OnTakeDamage;
     [SerializeField] float health, maxHealth = 3f;
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
@@ -66,9 +68,9 @@ public class shooterOneScript : MonoBehaviour
         health -= damageAmount;
         Debug.Log($"Health is now: {health}");
 
-        if (health < 0) {
+        if (health <= 0) {
             Destroy(gameObject);
-            OnEnemyKilled?.Invoke(this);
+            onEnemyKilled.Invoke();
         }
     }
 
