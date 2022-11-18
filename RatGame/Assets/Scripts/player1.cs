@@ -10,11 +10,21 @@ public class player1 : MonoBehaviour {
       private bool FaceRight = true;
 
       public Health health;
+      public PlayerWeapon weapon;
+
+      Vector2 mousePosition;
 
       // Auto-load the RigidBody component into the variable:
        void Start(){
             rb = GetComponent<Rigidbody2D> ();
             rb.freezeRotation = true;
+      }
+
+      void Update() {
+            if(Input.GetMouseButtonDown(0)){
+                  weapon.fire();
+            }
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
       }
 
       // Listen for player input to move the object:
@@ -28,6 +38,11 @@ public class player1 : MonoBehaviour {
             if ((movement.x <0 && !FaceRight) || (movement.x >0 && FaceRight)){
                   playerTurn();
             }
+
+            Vector2 aimDirection = mousePosition - rb.position;
+            float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+            //firept.rotation = aimAngle;
+            rb.rotation = aimAngle;
       
       }
 

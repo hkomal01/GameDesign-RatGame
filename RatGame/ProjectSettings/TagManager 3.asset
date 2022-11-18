@@ -8,6 +8,7 @@ TagManager:
   - Enemies
   - Teleporter
   - Entities
+  - Bullet
   - Walls
   layers:
   - Default

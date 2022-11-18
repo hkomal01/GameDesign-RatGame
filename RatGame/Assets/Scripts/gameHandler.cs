@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class gameHandler : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public static bool GameIsPaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +18,24 @@ public class gameHandler : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)) {
-            Pause();
+            if(GameIsPaused) {
+                Resume();
+            } else {
+                Pause();
+            }
         }
     }
 
     public void Pause() {
         pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    public void Resume() {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
     }
 
     public void quit() {
