@@ -29,15 +29,15 @@ public class Respawn : MonoBehaviour {
 	public float TimeBetweenSpawns = 1f;
 	private float timeBetweenSpawnsTimer = 0f;
 
-	[Header ("Spawn Slime")]
+	[Header ("Spawn")]
 	public int spawnAmount = 1;
-	public float slimeSpawnTime = 1.1f;
+	public float SpawnTime = 1.1f;
 
 
 	public Animator animator;
 
-	public GameObject SlimePrefab;
-	public Vector2 SlimeOffSet;
+	public GameObject Prefab;
+	public Vector2 OffSet;
 
 
 	// State Machine
@@ -104,9 +104,9 @@ public class Respawn : MonoBehaviour {
 	}
 
 	IEnumerator SpawningSlime_Enter () {
-		yield return new WaitForSeconds (slimeSpawnTime);
+		yield return new WaitForSeconds (SpawnTime);
 
-		Instantiate (SlimePrefab, new Vector2(transform.position.x, transform.position.y) + SlimeOffSet, Quaternion.identity);
+		Instantiate (Prefab, new Vector2(transform.position.x, transform.position.y) + OffSet, Quaternion.identity);
 
 		fsm.ChangeState (States.Idle, StateTransition.Overwrite);
 	}

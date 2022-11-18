@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6066417511227601875}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: bulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6044854910039248658}
   - component: {fileID: 1594205675837281285}
   - component: {fileID: 5836669358301971510}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: shooterEnemy
   m_TagString: Enemies
   m_Icon: {fileID: 0}
@@ -132,17 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ee6b452313c9342bbbd7f2779c5b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 1
-  wasOnGround: 1
-  Speed: {x: 0, y: 0}
-  movementCounter: {x: 0, y: 0}
-  solid_layer:
-    serializedVersion: 2
-    m_Bits: 256
-  entities_layer:
-    serializedVersion: 2
-    m_Bits: 512
-  myCollider: {fileID: 0}
   onEnemyKilled:
     m_PersistentCalls:
       m_Calls:
@@ -211,7 +200,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -241,7 +230,7 @@ GameObject:
   - component: {fileID: 5648946607947072018}
   - component: {fileID: 6073877083620976185}
   - component: {fileID: 6073877083620976186}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: bulletOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +272,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3381e283ff8a1064191dce947efa27f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
