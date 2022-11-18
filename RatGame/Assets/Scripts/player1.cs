@@ -22,7 +22,7 @@ public class player1 : MonoBehaviour {
       }
 
       void Update() {
-            if(Input.GetMouseButtonDown(0)){
+            if(Input.GetButtonDown("Fire1")){
                   weapon.fire();
             }
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -43,10 +43,6 @@ public class player1 : MonoBehaviour {
                   playerTurn();
             }
 
-            Vector2 aimDirection = mousePosition - rb.position;
-            float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-            //firept.rotation = aimAngle;
-            rb.rotation = aimAngle;
       
       }
 
