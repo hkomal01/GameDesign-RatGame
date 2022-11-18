@@ -9,7 +9,7 @@ public class shooterOneScript : MonoBehaviour
 {
     public UnityEvent onEnemyKilled;
     public UnityEvent OnTakeDamage;
-    [SerializeField] float health, maxHealth = 3f;
+    public float health, maxHealth = 3f;
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
     Transform target;

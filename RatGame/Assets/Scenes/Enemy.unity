@@ -596,6 +596,7 @@ MonoBehaviour:
   rb: {fileID: 856908018}
   moveSpeed: 5
   movement: {x: 0, y: 0}
+  Animator: {fileID: 0}
   health: {fileID: 856908023}
   weapon: {fileID: 540918086}
 --- !u!4 &856908022 stripped

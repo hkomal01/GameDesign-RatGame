@@ -8,6 +8,7 @@ public class player1 : MonoBehaviour {
       public float moveSpeed = 5f;
       public Vector2 movement;
       private bool FaceRight = true;
+      public Animator Animator;
 
       public Health health;
       public PlayerWeapon weapon;
@@ -25,6 +26,9 @@ public class player1 : MonoBehaviour {
                   weapon.fire();
             }
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // if(health.health == 0) {
+            //       Animator.Play ("Dead");
+            // }
       }
 
       // Listen for player input to move the object:
