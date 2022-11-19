@@ -24,6 +24,9 @@ public class player1 : MonoBehaviour {
       void Update() {
             if(Input.GetButtonDown("Fire1")){
                   weapon.fire();
+                  if (CameraShaker.instance != null) {
+			      CameraShaker.instance.InitShake(0.125f, 1f);
+		      }
             }
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // if(health.health == 0) {
@@ -43,7 +46,7 @@ public class player1 : MonoBehaviour {
                   playerTurn();
             }
 
-      
+            
       }
 
       //change facing

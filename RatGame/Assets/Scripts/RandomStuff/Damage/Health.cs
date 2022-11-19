@@ -59,6 +59,10 @@ public class Health : MonoBehaviour {
 			}	 
 		}
 
+		if (CameraShaker.instance != null) {
+			CameraShaker.instance.InitShake(0.125f, 1f);
+		}
+
 		return true;
 	}
 
