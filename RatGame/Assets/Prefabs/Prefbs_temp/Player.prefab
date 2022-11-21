@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4146613903676475966}
-  moveSpeed: 5
+  moveSpeed: 3
   movement: {x: 0, y: 0}
   Animator: {fileID: 0}
   health: {fileID: 856908023}
