@@ -23,4 +23,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shooting.unity
     guid: cdb6d1cf7eccac74aaaea3b4b36859a3
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: ed3cd27fd69f18e488c5ea65db3adc80, type: 2}

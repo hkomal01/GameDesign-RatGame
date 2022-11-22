@@ -850,7 +850,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 1
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 320.38754, y: 180}
+  m_ReferenceResolution: {x: 319.94998, y: 180}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1665,7 +1665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: volume
+  m_text: Volume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2080,6 +2080,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 540918086, guid: f7e2fa581e6374166ba7a8edbde1d558, type: 3}
+      propertyPath: fireForce
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 856908023, guid: f7e2fa581e6374166ba7a8edbde1d558, type: 3}
       propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class player1 : MonoBehaviour {
@@ -12,17 +13,27 @@ public class player1 : MonoBehaviour {
 
       public Health health;
       public PlayerWeapon weapon;
+      private bool controller;
 
       Vector2 mousePosition;
+
 
       // Auto-load the RigidBody component into the variable:
        void Start(){
             rb = GetComponent<Rigidbody2D> ();
             rb.freezeRotation = true;
+            controller = false;
       }
 
       void Update() {
-            if(Input.GetButtonDown("Fire1")){
+            var gamepad = Gamepad.current;
+            
+            if(!controller && Input.GetButtonDown("Fire1")){
+                  weapon.fire();
+                  if (CameraShaker.instance != null) {
+			      CameraShaker.instance.InitShake(0.125f, 1f);
+		      }
+            } else if (gamepad.rightTrigger.wasPressedThisFrame){
                   weapon.fire();
                   if (CameraShaker.instance != null) {
 			      CameraShaker.instance.InitShake(0.125f, 1f);
@@ -36,8 +47,14 @@ public class player1 : MonoBehaviour {
 
       // Listen for player input to move the object:
       void FixedUpdate(){
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
+            var gamepad = Gamepad.current;
+            if (gamepad == null) {
+                  movement.x = Input.GetAxisRaw("Horizontal");
+                  movement.y = Input.GetAxisRaw("Vertical");
+            } else {
+                  movement = gamepad.leftStick.ReadValue();
+            }
+            
             movement = movement.normalized;
             rb.MovePosition(rb.position + movement * moveSpeed);
 
