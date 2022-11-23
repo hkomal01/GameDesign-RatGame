@@ -9,7 +9,8 @@ public class shooterOneScript : MonoBehaviour
 {
     public UnityEvent onEnemyKilled;
     public UnityEvent OnTakeDamage;
-    public float health, maxHealth = 3f;
+    public float Health;
+    public float maxHealth = 3f;
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
     Transform target;
@@ -30,7 +31,7 @@ public class shooterOneScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
+        Health = maxHealth;
         target = GameObject.FindGameObjectWithTag("Entity").transform;
         clone = Instantiate(bullet);
         clone.gameObject.transform.localScale = new Vector2(1,1);
@@ -66,10 +67,10 @@ public class shooterOneScript : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         Debug.Log($"Damage amount: {damageAmount}");
-        health -= damageAmount;
-        Debug.Log($"Health is now: {health}");
+        Health -= damageAmount;
+        Debug.Log($"Health is now: {Health}");
 
-        if (health <= 0) {
+        if (Health <= 0) {
             Destroy(gameObject);
             onEnemyKilled.Invoke();
         }
@@ -79,5 +80,11 @@ public class shooterOneScript : MonoBehaviour
     {
         GameObject fired = Instantiate(clone, bulletPos.position, Quaternion.identity);
         Destroy(fired, bulletLife);
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+        onEnemyKilled.Invoke();
     }
 }

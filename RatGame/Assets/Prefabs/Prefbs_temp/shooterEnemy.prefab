@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6066417511227601875}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,9 +44,10 @@ GameObject:
   - component: {fileID: 6044854910039248658}
   - component: {fileID: 1594205675837281285}
   - component: {fileID: 5836669358301971510}
-  m_Layer: 0
+  - component: {fileID: -1144795428296023534}
+  m_Layer: 9
   m_Name: shooterEnemy
-  m_TagString: Enemies
+  m_TagString: Entities
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +163,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  health: 0
+  Health: 0
   maxHealth: 10
   moveSpeed: 20
   bullet: {fileID: 6073877083620976177}
@@ -203,7 +204,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0053916574, y: 0.0046199635}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -214,8 +215,48 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.48}
+  m_Size: {x: 0.44369382, y: 0.44117224}
   m_EdgeRadius: 0
+--- !u!114 &-1144795428296023534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073877083204294844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfb1fcd9c811fb479195ee658df5379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTakeDamageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTakeHealEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6044854910039248658}
+        m_TargetAssemblyTypeName: shooterOneScript, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxHealth: 10
+  health: 0
+  dead: 0
+  invincible: 0
+  becomeInvincibleOnHit: 0
+  invincibleTimeOnHit: 0.5
+  DieEventsAfterTime: 1
 --- !u!1 &6073877083620976177
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +271,7 @@ GameObject:
   - component: {fileID: 5648946607947072018}
   - component: {fileID: 6073877083620976185}
   - component: {fileID: 6073877083620976186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bulletOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}

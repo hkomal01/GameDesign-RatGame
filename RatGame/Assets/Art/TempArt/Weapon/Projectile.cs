@@ -113,7 +113,9 @@ public class Projectile : MonoBehaviour {
 	}
 
 	void OnCollideWithEntity(Collider2D col) {
+		Debug.Log("Entity: " + col);
 		var component = col.GetComponent<Health> ();
+		Debug.Log(component);
 		// If the target the hitbox collided with has a health component and it is not our owner and it is not on the already on the list of healths damaged by the current hitbox
 		if (component != null && component != owner && !healthsDamaged.Contains(component)) {
 			// Add the health component to the list of damaged healths
