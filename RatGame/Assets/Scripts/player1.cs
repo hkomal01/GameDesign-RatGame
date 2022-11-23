@@ -27,13 +27,19 @@ public class player1 : MonoBehaviour {
 
       void Update() {
             var gamepad = Gamepad.current;
+            if (Gamepad.current != null) {
+                  gamepad = Gamepad.current;
+            } else {
+                  gamepad = null;
+            }
+
             
             if(!controller && Input.GetButtonDown("Fire1")){
                   weapon.fire();
                   if (CameraShaker.instance != null) {
 			      CameraShaker.instance.InitShake(0.125f, 1f);
 		      }
-            } else if (gamepad.rightTrigger.wasPressedThisFrame){
+            } else if (gamepad != null && gamepad.rightTrigger.wasPressedThisFrame){
                   weapon.fire();
                   if (CameraShaker.instance != null) {
 			      CameraShaker.instance.InitShake(0.125f, 1f);

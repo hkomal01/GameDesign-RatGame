@@ -10,7 +10,14 @@ public class pointToCursor : MonoBehaviour
 
     private void Update() {
         var gamepad = Gamepad.current;
-        if (gamepad != null) {
+        if (Gamepad.current != null) {
+            gamepad = Gamepad.current;
+        } else {
+            gamepad = null;
+        }
+        
+        
+        if (gamepad == null) {
             var mouseScreenPos = Input.mousePosition;
             var startingScreenPos = Camera.main.WorldToScreenPoint(transform.position);
             mouseScreenPos.x -= startingScreenPos.x;
