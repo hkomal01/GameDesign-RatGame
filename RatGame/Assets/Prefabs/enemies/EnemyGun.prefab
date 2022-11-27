@@ -139,7 +139,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6549806081642745765}
-  - component: {fileID: 6592517899454841723}
   m_Layer: 0
   m_Name: EnemyGun
   m_TagString: Untagged
@@ -164,29 +163,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6592517899454841723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6552514306960529587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 514bd21e1a8aa634e811f9196cbe922b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetNormal: {x: 0, y: 0}
-  recoilForce: 4
-  casingPrefab: {fileID: 0}
-  projectile: {fileID: 114311099708109720, guid: 38035907be1a22041bf973756acec292, type: 3}
-  muzzleFlash: {fileID: 0}
-  Cooldown: 0.15
-  WeaponUIIcon: {fileID: 21300000, guid: 19342c6555d6acc40a5233b705253acd, type: 3}
-  ZOffSet: 0
-  ZOrderComponent: {fileID: 0}
-  spriteRenderer: {fileID: 6347894243678082481}
-  spriteHolder: {fileID: 6556095198612882113}
-  gunBarrel: {fileID: 6555838278148241369}
-  owner: {fileID: 0}
-  randomAngle: 4
