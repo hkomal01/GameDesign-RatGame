@@ -32,6 +32,7 @@ public class Projectile : MonoBehaviour {
 	private Vector2 movementCounter = Vector2.zero;  // Counter for subpixel movement
 	public BoxCollider2D myCollider; 
 	List<Health> healthsDamaged = new List<Health>(); // List to store healths damaged
+	public GameObject player;
 
 	void Awake () {
 		if (myCollider == null) {
@@ -113,9 +114,7 @@ public class Projectile : MonoBehaviour {
 	}
 
 	void OnCollideWithEntity(Collider2D col) {
-		Debug.Log("Entity: " + col);
 		var component = col.GetComponent<Health> ();
-		Debug.Log(component);
 		// If the target the hitbox collided with has a health component and it is not our owner and it is not on the already on the list of healths damaged by the current hitbox
 		if (component != null && component != owner && !healthsDamaged.Contains(component)) {
 			// Add the health component to the list of damaged healths
