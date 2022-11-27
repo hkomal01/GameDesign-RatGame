@@ -169,6 +169,7 @@ MonoBehaviour:
   bouncesLeft: 0
   owner: {fileID: 0}
   myCollider: {fileID: 61320119292746046}
+  player: {fileID: 0}
 --- !u!61 &61320119292746046
 BoxCollider2D:
   m_ObjectHideFlags: 0
