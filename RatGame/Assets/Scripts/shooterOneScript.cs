@@ -80,7 +80,7 @@ public class shooterOneScript : MonoBehaviour
         var amount = UnityEngine.Random.Range (-randomAngle, randomAngle);
         ProjectileEnemy fired = Instantiate(bullet, gunBarrel.position, Quaternion.Euler(new Vector3(0f, 0f, currentAngle + amount))) as ProjectileEnemy;//Quaternion.identity);
         fired.owner = owner;
-        Destroy(fired, bulletLife);
+        Destroy(fired.gameObject, bulletLife);
     }
 
     public void Die()
