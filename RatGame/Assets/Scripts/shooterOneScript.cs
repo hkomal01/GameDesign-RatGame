@@ -7,8 +7,6 @@ using UnityEngine.Events;
 
 public class shooterOneScript : MonoBehaviour
 {
-    public UnityEvent onEnemyKilled;
-    public UnityEvent OnTakeDamage;
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
     Transform target;
@@ -16,7 +14,6 @@ public class shooterOneScript : MonoBehaviour
 
     [Header ("Stats")]
     public ProjectileEnemy bullet;
-    public Transform bulletPos;
     public float bulletLife = 5.0f;
     public float fireDelay;
     public Health owner;
@@ -38,9 +35,6 @@ public class shooterOneScript : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Entity").transform;
-        //clone = Instantiate(bullet);
-        //clone.gameObject.transform.localScale = new Vector2(1,1);
-        //Destroy(bullet, 0);
     }
 
     // Update is called once per frame
@@ -86,6 +80,5 @@ public class shooterOneScript : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
-        onEnemyKilled.Invoke();
     }
 }
