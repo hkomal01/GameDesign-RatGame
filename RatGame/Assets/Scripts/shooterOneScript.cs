@@ -12,12 +12,16 @@ public class shooterOneScript : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
 
+    [Header ("Facing Direction")]
+	public Facings Facing;
+
     [Header ("Stats")]
     public ProjectileEnemy bullet;
     public float bulletLife = 5.0f;
     public float fireDelay;
     public Health owner;
     public Transform gunBarrel;
+    public WeaponEnemy weapon;
 
     [Header ("Angle")]
     protected float currentAngle = 0f;
@@ -45,7 +49,7 @@ public class shooterOneScript : MonoBehaviour
         if(target) {
             Vector3 direction = (target.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            rb.rotation = angle;
+            //rb.rotation = angle;
             currentAngle = angle;
             moveDirection = direction;
         }
@@ -55,6 +59,20 @@ public class shooterOneScript : MonoBehaviour
             timer = timer - fireDelay;
             shoot();
         }
+
+        if (currentAngle < 0) {
+			currentAngle += 360f;
+		}
+
+		if (currentAngle > 270 || currentAngle < 90) {
+            Facing = Facings.Right;
+		} else {
+			Facing = Facings.Left;
+		}
+
+        if (weapon != null) {
+			weapon.SetRotation (currentAngle);
+		}
     }
 
     void FixedUpdate()
@@ -62,6 +80,11 @@ public class shooterOneScript : MonoBehaviour
         if(target) {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
+    }
+
+    void UpdateSprite () {
+		var targetScale = Facing == Facings.Right ? new Vector3(1f,1f,1f) : new Vector3(-1f,1f,1f);
+		transform.localScale = targetScale;
     }
 
     public void TakeDamage(float damageAmount)

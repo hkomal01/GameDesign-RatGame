@@ -102,11 +102,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
+  Facing: 1
   bullet: {fileID: 6878118083759535176, guid: a792f2e01634a0d48911623f94b12a50, type: 3}
   bulletLife: 5
   fireDelay: 1
   owner: {fileID: -1144795428296023534}
   gunBarrel: {fileID: 863959451826443103}
+  weapon: {fileID: 773677108870877720}
   randomAngle: 20
 --- !u!50 &1594205675837281285
 Rigidbody2D:
@@ -122,13 +124,13 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5836669358301971510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -284,6 +286,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec7db925d5308ac4fb270ddbccf4c47a, type: 3}
+--- !u!114 &773677108870877720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6609812683409749662, guid: ec7db925d5308ac4fb270ddbccf4c47a, type: 3}
+  m_PrefabInstance: {fileID: 5838462435251184774}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7f4b05844519640858b29007da096b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &856800257564584739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6549806081642745765, guid: ec7db925d5308ac4fb270ddbccf4c47a, type: 3}
