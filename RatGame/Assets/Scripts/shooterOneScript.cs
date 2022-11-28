@@ -30,6 +30,10 @@ public class shooterOneScript : MonoBehaviour
     private float timer;
     //private GameObject clone;
 
+    private GameObject grid;
+    private GameObject exit;
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -102,6 +106,16 @@ public class shooterOneScript : MonoBehaviour
 
     public void Die()
     {
+        grid = GameObject.Find("Grid");
+
+        if (grid) {
+            exit = grid.transform.Find("ExitDoor_TM").gameObject;
+            if (exit) {
+                exit.gameObject.SetActive(true);
+            } else {
+                Debug.Log("Could not find Exit door.");
+            }
+        }
         Destroy(gameObject);
     }
 }
