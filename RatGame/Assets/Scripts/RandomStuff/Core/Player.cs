@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 using MonsterLove.StateMachine;
 
@@ -19,6 +20,7 @@ public class Player : Actor {
 	public Transform SpriteHolder;
 
 	// Helper private Variables
+	public Vector2 value;
 	private int moveX; // Variable to store the horizontal Input each frame
 	private int moveY; // Variable to store the vectical Input each frame
 
@@ -79,6 +81,7 @@ public class Player : Actor {
 	void Start () {
 		input = InputManager.instance;
 		fsm.ChangeState(States.Normal);
+		value = new Vector2(0,0);
 
 		if (UIHeartsHealthBar.instance != null) {
 			UIHeartsHealthBar.instance.SetHearts ((int)PlayerPrefs.GetFloat("Health"));
@@ -87,11 +90,19 @@ public class Player : Actor {
 	
 	// Update is called once per frame
 	void Update () {
+		var gamepad = Gamepad.current;
 		// Update the moveX Variable and assign the current vertical input for this frame
 		moveX = (int)input.GetAxis(playerNumber, InputAction.MoveX);
 
 		// Update the moveY Variable and assign the current vertical input for this frame
 		moveY = (int)input.GetAxis(playerNumber, InputAction.MoveY);
+
+		value.x = moveX;
+		value.y = moveY;
+
+		if (gamepad != null) {
+			value = gamepad.leftStick.ReadValue();
+		}
 
 		if (rollCooldownTimer > 0f) {
 			rollCooldownTimer -= Time.deltaTime;
@@ -127,7 +138,7 @@ public class Player : Actor {
 		// }
 
 		// Movement
-		Vector2 value = new Vector2(moveX, moveY);
+		
 		value.Normalize();
 		Speed.x = Calc.Approach (Speed.x, value.x * MaxRun, RunAccel * Time.deltaTime);
 		Speed.y = Calc.Approach (Speed.y, value.y * MaxRun, RunAccel * Time.deltaTime);
