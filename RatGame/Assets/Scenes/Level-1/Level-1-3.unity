@@ -459,6 +459,10 @@ PrefabInstance:
       propertyPath: new_scene
       value: Level-1-2
       objectReference: {fileID: 0}
+    - target: {fileID: 580160004632866040, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: gameObject
+      value: 
+      objectReference: {fileID: 1693411905}
     - target: {fileID: 785865866820075873, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: m_Size.x
       value: 23
@@ -527,6 +531,10 @@ PrefabInstance:
       propertyPath: new_scene
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: gameObject
+      value: 
+      objectReference: {fileID: 1693411905}
     - target: {fileID: 5552883842080837521, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: m_Size.x
       value: 24
