@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 //using MonsterLove.StateMachine;
 
-public class shooterOneScript : MonoBehaviour
+public class easyEnemy : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
@@ -16,12 +16,12 @@ public class shooterOneScript : MonoBehaviour
 	public Facings Facing;
 
     [Header ("Stats")]
-    public ProjectileEnemy bullet;
-    public float bulletLife = 5.0f;
-    public float fireDelay;
+    // public ProjectileEnemy bullet;
+    // public float bulletLife = 5.0f;
+    // public float fireDelay;
     public Health owner;
-    public Transform gunBarrel;
-    public WeaponEnemy weapon;
+    // public Transform gunBarrel;
+    // public WeaponEnemy weapon;
 
     [Header ("Angle")]
     protected float currentAngle = 0f;
@@ -42,7 +42,7 @@ public class shooterOneScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Entity").transform;
+        target = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
@@ -59,10 +59,10 @@ public class shooterOneScript : MonoBehaviour
         }
 
 
-        if(timer > fireDelay){
-            timer = timer - fireDelay;
-            shoot();
-        }
+        // if(timer > fireDelay){
+        //     timer = timer - fireDelay;
+        //     shoot();
+        // }
 
         if (currentAngle < 0) {
 			currentAngle += 360f;
@@ -74,9 +74,9 @@ public class shooterOneScript : MonoBehaviour
 			Facing = Facings.Left;
 		}
 
-        if (weapon != null) {
-			weapon.SetRotation (currentAngle);
-		}
+        // if (weapon != null) {
+		// 	weapon.SetRotation (currentAngle);
+		// }
     }
 
     void FixedUpdate()
@@ -86,7 +86,7 @@ public class shooterOneScript : MonoBehaviour
         }
     }
 
-    void UpdateSprite () {
+    void UpdateSprite() {
 		var targetScale = Facing == Facings.Right ? new Vector3(1f,1f,1f) : new Vector3(-1f,1f,1f);
 		transform.localScale = targetScale;
     }
@@ -96,13 +96,13 @@ public class shooterOneScript : MonoBehaviour
         print("damage");
     }
 
-    void shoot()
-    {
-        var amount = UnityEngine.Random.Range (-randomAngle, randomAngle);
-        ProjectileEnemy fired = Instantiate(bullet, gunBarrel.position, Quaternion.Euler(new Vector3(0f, 0f, currentAngle + amount))) as ProjectileEnemy;//Quaternion.identity);
-        fired.owner = owner;
-        Destroy(fired.gameObject, bulletLife);
-    }
+    // void shoot()
+    // {
+    //     var amount = UnityEngine.Random.Range (-randomAngle, randomAngle);
+    //     ProjectileEnemy fired = Instantiate(bullet, gunBarrel.position, Quaternion.Euler(new Vector3(0f, 0f, currentAngle + amount))) as ProjectileEnemy;//Quaternion.identity);
+    //     fired.owner = owner;
+    //     Destroy(fired.gameObject, bulletLife);
+    // }
 
     public void Die()
     {

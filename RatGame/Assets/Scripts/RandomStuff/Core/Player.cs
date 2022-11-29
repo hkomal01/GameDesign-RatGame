@@ -60,6 +60,13 @@ public class Player : Actor {
 	[HideInInspector]
 	public IInputManager input;
 
+
+	//For opening doors when enemies are dead;
+	private GameObject[] entities;
+	private GameObject grid;
+    private GameObject exit;
+
+
 	new void Awake () {
 		base.Awake ();
 		fsm = StateMachine<States>.Initialize(this);
@@ -88,7 +95,24 @@ public class Player : Actor {
 
 		if (rollCooldownTimer > 0f) {
 			rollCooldownTimer -= Time.deltaTime;
-		}	
+		}
+
+ 		entities = GameObject.FindGameObjectsWithTag("Entities");	
+		if (entities.Length == 0)
+			unlock_door(); 
+	}
+
+	void unlock_door() {
+		grid = GameObject.Find("Grid");
+
+        if (grid) {
+            exit = grid.transform.Find("ExitDoor_TM").gameObject;
+            if (exit) {
+                exit.gameObject.SetActive(true);
+            } else {
+                Debug.Log("Could not find Exit door.");
+            }
+        }
 	}
 		
 	void Normal_Update () {
