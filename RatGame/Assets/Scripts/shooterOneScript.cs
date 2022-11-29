@@ -27,9 +27,8 @@ public class shooterOneScript : MonoBehaviour
     protected float currentAngle = 0f;
 	public float randomAngle = 20;
 
-    private float timer;
     //private GameObject clone;
-
+    private float timer;
     private GameObject grid;
     private GameObject exit;
 
