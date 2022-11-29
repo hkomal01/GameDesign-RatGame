@@ -29,6 +29,10 @@ public class PickUp : Interactable {
 		base.OnPlayerTrigger (player);
 
         health.TakeHeal(1);
+		PlayerPrefs.SetFloat("Health", (int)PlayerPrefs.GetFloat("Health") + 1);
+		UIHeartsHealthBar.instance.SetHearts ((int)PlayerPrefs.GetFloat("Health"));
+
+
 
 		// Instantiate the pickup fx
 		if (PickFxPrefab != null) {
