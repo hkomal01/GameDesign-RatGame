@@ -5,12 +5,7 @@ using UnityEngine;
 public class PickUp : Interactable {
 
 	public GameObject PickFxPrefab;
-
-    [Header("Targets")]
-	public string TargetTag = "Entity";
-
-    [Header ("Damage")]
-	public int DamageToCause = 1;
+	public Health health;
 
 	// Update is called once per frame
 	new void Update () {
@@ -33,7 +28,6 @@ public class PickUp : Interactable {
 	{
 		base.OnPlayerTrigger (player);
 
-        var health = GetComponent<Collider2D>().gameObject.GetComponent<Health>();
         health.TakeHeal(1);
 
 		// Instantiate the pickup fx

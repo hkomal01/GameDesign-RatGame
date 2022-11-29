@@ -384,7 +384,7 @@ MonoBehaviour:
   PressToInteract: 1
   actionToTrigger: 0
   PickFxPrefab: {fileID: 0}
-  TargetTag: Entity
+  health: {fileID: 0}
 --- !u!1 &567325897
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +514,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5212314911171027215, guid: f316b2cc1f4a115498b32e49b293a292, type: 3}
   m_PrefabInstance: {fileID: 64131544}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1390658502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5316242915029175483, guid: f316b2cc1f4a115498b32e49b293a292, type: 3}
+  m_PrefabInstance: {fileID: 64131544}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390658501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfb1fcd9c811fb479195ee658df5379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1541364391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -877,7 +888,7 @@ MonoBehaviour:
   PressToInteract: 0
   actionToTrigger: 0
   PickFxPrefab: {fileID: 0}
-  TargetTag: Entity
+  health: {fileID: 1390658502}
 --- !u!61 &1805539203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11652,6 +11663,10 @@ PrefabInstance:
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 54209396}
+    - target: {fileID: 8325749328749997549, guid: 7229c727d1252c44f854c59fde48d9c9, type: 3}
+      propertyPath: orthographic size
+      value: 91
+      objectReference: {fileID: 0}
     - target: {fileID: 8343617023001869711, guid: 7229c727d1252c44f854c59fde48d9c9, type: 3}
       propertyPath: m_Name
       value: Camera
