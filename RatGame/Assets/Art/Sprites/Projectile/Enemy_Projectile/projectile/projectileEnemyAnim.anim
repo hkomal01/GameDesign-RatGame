@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: projectileAnim
+  m_Name: projectileEnemyAnim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -62,8 +62,6 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0
-      value: {fileID: 21300000, guid: 81d6db70f7de090469f827c6e0d6e2d4, type: 3}
     - time: 0.033333335
       value: {fileID: 21300000, guid: 0791ec86636fd1744970975837d6c516, type: 3}
     - time: 0.2
@@ -94,7 +92,6 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 81d6db70f7de090469f827c6e0d6e2d4, type: 3}
     - {fileID: 21300000, guid: 0791ec86636fd1744970975837d6c516, type: 3}
     - {fileID: 21300000, guid: 0791ec86636fd1744970975837d6c516, type: 3}
   m_AnimationClipSettings:

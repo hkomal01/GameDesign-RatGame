@@ -58,7 +58,6 @@ public class shooterOneScript : MonoBehaviour
             moveDirection = direction;
         }
 
-
         if(timer > fireDelay){
             timer = timer - fireDelay;
             shoot();

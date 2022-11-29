@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 1098838133307370}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 23b60254c23be954f93d3be5a4d36eb8, type: 2}
+  m_Controller: {fileID: 9100000, guid: ae1bd9f180e6d86469147b22fa51cb83, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   entities_layer:
     serializedVersion: 2
     m_Bits: 512
-  HitFxPrefab: {fileID: 1109302866432494, guid: 92167a4c37c9c414cab7ca740adf4675, type: 3}
+  HitFxPrefab: {fileID: 1109302866432494, guid: d1657ebb3e0c70c488f50186799fe391, type: 3}
   DustFxPrefab: {fileID: 1975034529590746, guid: f82a2ebc69047864b9dbb8d24375a8e9, type: 2}
   BounceOnCollide: 0
   bouncesLeft: 0
