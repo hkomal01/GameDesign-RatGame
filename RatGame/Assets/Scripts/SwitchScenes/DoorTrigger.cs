@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DoorTrigger : MonoBehaviour
 {
     public string new_scene;
+    public gameHandler gameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class DoorTrigger : MonoBehaviour
             Debug.Log("enter new Scene");
             // string new_scene = "Level-1-3";
             SceneManager.LoadScene(new_scene);
+            Destroy(gameObject);
         }
     }
 }
