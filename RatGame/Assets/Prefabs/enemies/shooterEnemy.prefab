@@ -196,7 +196,7 @@ MonoBehaviour:
   invincible: 0
   becomeInvincibleOnHit: 0
   invincibleTimeOnHit: 0.5
-  DieEventsAfterTime: 1
+  DieEventsAfterTime: 0.1
 --- !u!1 &7400125044164327383
 GameObject:
   m_ObjectHideFlags: 0
