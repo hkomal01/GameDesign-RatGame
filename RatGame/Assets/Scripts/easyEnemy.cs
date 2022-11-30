@@ -93,7 +93,7 @@ public class easyEnemy : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        print("damage");
+        // print("damage");
     }
 
     // void shoot()

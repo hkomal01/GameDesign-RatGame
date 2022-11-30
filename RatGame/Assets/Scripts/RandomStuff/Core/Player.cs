@@ -108,6 +108,10 @@ public class Player : Actor {
 			value = gamepad.leftStick.ReadValue();
 		}
 
+		
+
+
+
 		if (rollCooldownTimer > 0f) {
 			rollCooldownTimer -= Time.deltaTime;
 		}
@@ -145,8 +149,13 @@ public class Player : Actor {
 
 		// Movement
 		value.Normalize();
+
+		// Debug.Log("1x, y: " + Speed.x + ", " + Speed.y);
+
 		Speed.x = Calc.Approach (Speed.x, value.x * MaxRun, RunAccel * Time.deltaTime);
 		Speed.y = Calc.Approach (Speed.y, value.y * MaxRun, RunAccel * Time.deltaTime);
+
+		// Debug.Log("2x, y: " + Speed.x + ", " + Speed.y);
 
 		// Aiming
 		// var mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -156,23 +165,24 @@ public class Player : Actor {
 		
 		var crossH_x = crosshairHolder.transform.position.x;
 		var crossH_y = crosshairHolder.transform.position.y;
-		
-		var new_CH_pos = new Vector2 (crossH_x + value.x, crossH_y + value.y);
+
+		var new_CH_pos = new Vector2 (Speed.x * Time.deltaTime + crossH_x, 
+									  Speed.y * Time.deltaTime + crossH_y);
 		crosshair.SetPos(new_CH_pos);
 
+		// var new_CH_pos = new Vector2 (crossH_x * Time.deltaTime, crossH_y * Time.deltaTime);
+		// crosshair.SetPos(new_CH_pos);
+
 		// crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, -65.0f));
-		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) > 40.0f) {
+		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) > 50.0f) {
 			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, 4.0f));
 		}
 
 		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) < 35.0f) {
 			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, -4.0f));
 		}
-		crossH_x = crosshairHolder.transform.position.x;
-		crossH_y = crosshairHolder.transform.position.y;
 
-		// var new_CH_pos = new Vector2 (crossH_x + value.x, crossH_y + value.y);
-		// crosshair.SetPos(new_CH_pos);
+		
 
 		// Debug.Log("dist: " + Vector2.Distance(transform.position, crosshairHolder.transform.position));
 
