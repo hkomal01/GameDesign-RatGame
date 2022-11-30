@@ -141,6 +141,8 @@ public class Player : Actor {
 		// 	return;
 		// }
 
+
+
 		// Movement
 		value.Normalize();
 		Speed.x = Calc.Approach (Speed.x, value.x * MaxRun, RunAccel * Time.deltaTime);
@@ -150,23 +152,27 @@ public class Player : Actor {
 		// var mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		// var mousePos = new Vector2( Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 		// var crossHair_pos = GameObject.Find("Crosshair").transform.position;
+		
+		
 		var crossH_x = crosshairHolder.transform.position.x;
 		var crossH_y = crosshairHolder.transform.position.y;
 		
 		var new_CH_pos = new Vector2 (crossH_x + value.x, crossH_y + value.y);
 		crosshair.SetPos(new_CH_pos);
+
 		// crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, -65.0f));
-		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) > 65.0f) {
-			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, 3.0f));
+		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) > 40.0f) {
+			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, 4.0f));
 		}
 
-		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) < 40.0f) {
-			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, -3.0f));
+		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) < 35.0f) {
+			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, -4.0f));
 		}
 		crossH_x = crosshairHolder.transform.position.x;
 		crossH_y = crosshairHolder.transform.position.y;
 
-		(Input.mousePosition).Set(crossH_x, crossH_y, 0.0f);
+		// var new_CH_pos = new Vector2 (crossH_x + value.x, crossH_y + value.y);
+		// crosshair.SetPos(new_CH_pos);
 
 		// Debug.Log("dist: " + Vector2.Distance(transform.position, crosshairHolder.transform.position));
 
@@ -183,8 +189,8 @@ public class Player : Actor {
 		// mousePos.x = Input.GetAxis("Mouse X");
 		// mousePos.y = Input.GetAxis("Mouse Y");
 
-		// Debug.Log("mouseX: " + mousePos.x);
-		// Debug.Log("mouseY: " + mousePos.y);
+		// Debug.Log("speedX: " + Speed.x);
+		// Debug.Log("speedY: " + Speed.y);
 
 
 

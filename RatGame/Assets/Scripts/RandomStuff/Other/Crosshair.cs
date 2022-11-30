@@ -10,9 +10,9 @@ public class Crosshair : MonoBehaviour {
 	void Update () {
 		// MouseCoords = Input.mousePosition;
 		// MouseCoords = Camera.main.ScreenToWorldPoint (MouseCoords);
-		MouseCoords = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0.0f);
+		MouseCoords = new Vector3(Input.GetAxis("Mouse X") * 2.0f, Input.GetAxis("Mouse Y") * 2.0f, 0.0f);
 		// if (MouseCoords.x != 0)
-		
+
 		MouseCoords.x = (MouseCoords.x) + transform.position.x;
 		// if (MouseCoords.y != 0)
 		MouseCoords.y = (MouseCoords.y) + transform.position.y;
