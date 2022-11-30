@@ -59,6 +59,8 @@ public class Player : Actor {
 	public Transform weaponHolder;
 	public Health health;
 	public Animator Animator;
+	public Crosshair crosshair;
+	public Transform crosshairHolder;
 	[HideInInspector]
 	public IInputManager input;
 
@@ -92,10 +94,12 @@ public class Player : Actor {
 	void Update () {
 		var gamepad = Gamepad.current;
 		// Update the moveX Variable and assign the current vertical input for this frame
-		moveX = (int)input.GetAxis(playerNumber, InputAction.MoveX);
-
+		// moveX = (int)input.GetAxis(playerNumber, InputAction.MoveX);
+		moveX = (int)Input.GetAxis("Horizontal");
+		
 		// Update the moveY Variable and assign the current vertical input for this frame
-		moveY = (int)input.GetAxis(playerNumber, InputAction.MoveY);
+		// moveY = (int)input.GetAxis(playerNumber, InputAction.MoveY);
+		moveY = (int)Input.GetAxis("Vertical");
 
 		value.x = moveX;
 		value.y = moveY;
@@ -143,7 +147,47 @@ public class Player : Actor {
 		Speed.y = Calc.Approach (Speed.y, value.y * MaxRun, RunAccel * Time.deltaTime);
 
 		// Aiming
-		var mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		// var mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		// var mousePos = new Vector2( Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+		// var crossHair_pos = GameObject.Find("Crosshair").transform.position;
+		var crossH_x = crosshairHolder.transform.position.x;
+		var crossH_y = crosshairHolder.transform.position.y;
+		
+		var new_CH_pos = new Vector2 (crossH_x + value.x, crossH_y + value.y);
+		crosshair.SetPos(new_CH_pos);
+		// crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, -65.0f));
+		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) > 65.0f) {
+			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, 3.0f));
+		}
+
+		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) < 40.0f) {
+			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, -3.0f));
+		}
+		crossH_x = crosshairHolder.transform.position.x;
+		crossH_y = crosshairHolder.transform.position.y;
+
+		(Input.mousePosition).Set(crossH_x, crossH_y, 0.0f);
+
+		// Debug.Log("dist: " + Vector2.Distance(transform.position, crosshairHolder.transform.position));
+
+		
+		// GameObject.Find("Crosshair").transform.position.y += value.y;
+
+		
+		var mousePos = GameObject.Find("Crosshair").transform.position;
+		
+		// mousePos.x += value.x;
+		// mousePos.y += value.y;
+
+		
+		// mousePos.x = Input.GetAxis("Mouse X");
+		// mousePos.y = Input.GetAxis("Mouse Y");
+
+		// Debug.Log("mouseX: " + mousePos.x);
+		// Debug.Log("mouseY: " + mousePos.y);
+
+
+
 		//float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
 		float angle = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x) * 180 / Mathf.PI;
 
