@@ -329,6 +329,7 @@ MonoBehaviour:
   RunReduce: 400
   Facing: -1
   SpriteHolder: {fileID: 5206700374884080841}
+  value: {x: 0, y: 0}
   PitLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -475,6 +476,10 @@ PrefabInstance:
       propertyPath: owner
       value: 
       objectReference: {fileID: 5316242915029175483}
+    - target: {fileID: 8459756799787376711, guid: 1b7c9c8d2a10be14d98765eccd559977, type: 3}
+      propertyPath: casingPrefab
+      value: 
+      objectReference: {fileID: 114293684337992642, guid: 0021c0871be2e674992c1d4a96dffcc1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b7c9c8d2a10be14d98765eccd559977, type: 3}
 --- !u!4 &5357730688767569209 stripped
