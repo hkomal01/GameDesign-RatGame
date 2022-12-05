@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 9071082192715906813}
   - component: {fileID: 9182010490324626669}
   - component: {fileID: 9182575186580385675}
-  - component: {fileID: 5594444447320339277}
+  - component: {fileID: 5596829100816462776}
   m_Layer: 5
   m_Name: health_display
   m_TagString: Untagged
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5594444447320339277
+--- !u!114 &5596829100816462776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

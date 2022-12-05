@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class DoorTrigger : MonoBehaviour
 {
     public string new_scene;
-    public gameHandler gameObject;
     public float x_pos;
     public float y_pos;
     public GameObject player;
