@@ -631,7 +631,7 @@ MonoBehaviour:
   Darken: {fileID: 0}
   tutorialUI: {fileID: 1121511942}
   text: {fileID: 6146312}
-  waitTime: 3
+  waitTime: 2
   tutorialIndex: 0
   taskFinished: 0
 --- !u!1001 &988673661
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Space to return to game
+  m_text: press Space to return to game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
