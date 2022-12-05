@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Object.DontDestroyOnLoad example.
 //
@@ -15,4 +16,14 @@ public class DontDestroy : MonoBehaviour
     {
        DontDestroyOnLoad(this.gameObject);
     }
+
+    void Update() {
+        if (SceneManager.GetActiveScene().name == "Menu") {
+            Destroy(this.gameObject);
+        }
+        if (SceneManager.GetActiveScene().name == "Level-1-1") {
+            Destroy(this.gameObject);
+        }
+    }
+    
 }

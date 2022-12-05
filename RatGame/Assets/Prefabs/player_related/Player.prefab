@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 5226830570174482459}
   - component: {fileID: 5316493834087513379}
   - component: {fileID: 5316242915029175483}
-  - component: {fileID: 8142131604725561537}
+  - component: {fileID: 1585022550445298614}
   m_Layer: 9
   m_Name: Player
   m_TagString: Entity
@@ -420,7 +420,7 @@ MonoBehaviour:
   becomeInvincibleOnHit: 1
   invincibleTimeOnHit: 0.5
   DieEventsAfterTime: 0
---- !u!114 &8142131604725561537
+--- !u!114 &1585022550445298614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
