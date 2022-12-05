@@ -16,6 +16,7 @@ public class gameHandler : MonoBehaviour
         pauseMenuUI.SetActive(false);
         player.SetActive(true);
         player = GameObject.FindWithTag("Entity");;
+        Update();
     }
 
     // Update is called once per frame

@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    void start() {
+    void Start() {
         Cursor.lockState = CursorLockMode.None;
+        Update();
+    }
+
+    void Update() {
+        Debug.Log("update");
     }
 
     public void PlayGame() {
