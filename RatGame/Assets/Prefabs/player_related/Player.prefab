@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 5226830570174482459}
   - component: {fileID: 5316493834087513379}
   - component: {fileID: 5316242915029175483}
+  - component: {fileID: 8142131604725561537}
   m_Layer: 9
   m_Name: Player
   m_TagString: Entity
@@ -341,6 +342,8 @@ MonoBehaviour:
   weaponHolder: {fileID: 5357730688767569209}
   health: {fileID: 5316242915029175483}
   Animator: {fileID: 5260638958834879287}
+  crosshair: {fileID: 0}
+  crosshairHolder: {fileID: 0}
 --- !u!114 &5316242915029175483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +420,18 @@ MonoBehaviour:
   becomeInvincibleOnHit: 1
   invincibleTimeOnHit: 0.5
   DieEventsAfterTime: 0
+--- !u!114 &8142131604725561537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212314911171027215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24f0d286e7184548920bbb5ee3f2c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4514169664655033742
 PrefabInstance:
   m_ObjectHideFlags: 0

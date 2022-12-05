@@ -15,6 +15,7 @@ public class gameHandler : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUI.SetActive(false);
         player.SetActive(true);
+        player = GameObject.FindWithTag("Entity");;
     }
 
     // Update is called once per frame

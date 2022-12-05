@@ -5,7 +5,11 @@ using UnityEngine;
 public class PickUp : Interactable {
 
 	public GameObject PickFxPrefab;
-	public Health health;
+	public GameObject health;
+
+	void Start() {
+		health = GameObject.Find("Player");
+	}
 
 	// Update is called once per frame
 	new void Update () {
@@ -28,7 +32,7 @@ public class PickUp : Interactable {
 	{
 		base.OnPlayerTrigger (player);
 
-        health.TakeHeal(1);
+		health.GetComponent<Health>().TakeHeal(1);
 		PlayerPrefs.SetFloat("Health", (int)PlayerPrefs.GetFloat("Health") + 1);
 		UIHeartsHealthBar.instance.SetHearts ((int)PlayerPrefs.GetFloat("Health"));
 

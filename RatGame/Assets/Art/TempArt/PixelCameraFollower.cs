@@ -34,6 +34,8 @@ public class PixelCameraFollower : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		m_Target = GameObject.Find("Player").transform;
+
 		Position = new Vector2 (Mathf.Round(transform.position.x), Mathf.Round(transform.position.y));
 		cameraPreShake = Position;
 
