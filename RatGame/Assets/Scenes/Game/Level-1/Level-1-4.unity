@@ -433,8 +433,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: x_pos
+      value: -186
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: y_pos
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: new_scene
-      value: Menu
+      value: Level-1-5
       objectReference: {fileID: 0}
     - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: gameObject
