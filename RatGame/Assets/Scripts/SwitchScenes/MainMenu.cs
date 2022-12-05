@@ -13,4 +13,17 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetFloat("Health", 4);
         SceneManager.LoadScene("Level-1-1");
     }
+
+    public void quit() {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #else
+            Application.Quit();
+            #endif
+    }
+
+    public void enterTutorial() {
+        PlayerPrefs.SetFloat("Health", 4);
+        SceneManager.LoadScene("Tutorial");
+    }
 }
