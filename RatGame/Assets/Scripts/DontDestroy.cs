@@ -21,9 +21,9 @@ public class DontDestroy : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Menu") {
             Destroy(this.gameObject);
         }
-        if (SceneManager.GetActiveScene().name == "Level-1-1") {
-            Destroy(this.gameObject);
-        }
+        // if (SceneManager.GetActiveScene().name == "Level-1-1") {
+        //     Destroy(this.gameObject);
+        // }
     }
     
 }
