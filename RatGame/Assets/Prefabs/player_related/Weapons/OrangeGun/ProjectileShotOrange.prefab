@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 61320119292746046}
   - component: {fileID: 50005255313101632}
   m_Layer: 0
-  m_Name: ProjectileShot
+  m_Name: ProjectileShotOrange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,11 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188ca0e9a5f99de439c937eedf56c7dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 600
+  baseSpeed: 1200
   randomSpeed: 0
   SpeedV2: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
-  DamageOnHit: 1
+  DamageOnHit: 30
   solid_layer:
     serializedVersion: 2
     m_Bits: 256

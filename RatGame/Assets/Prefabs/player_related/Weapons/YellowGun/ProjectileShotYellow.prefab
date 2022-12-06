@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 61320119292746046}
   - component: {fileID: 50005255313101632}
   m_Layer: 0
-  m_Name: ProjectileShot
+  m_Name: ProjectileShotYellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   randomSpeed: 0
   SpeedV2: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
-  DamageOnHit: 1
+  DamageOnHit: 10
   solid_layer:
     serializedVersion: 2
     m_Bits: 256

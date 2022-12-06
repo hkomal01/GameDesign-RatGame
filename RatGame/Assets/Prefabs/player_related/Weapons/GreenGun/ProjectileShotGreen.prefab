@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 61320119292746046}
   - component: {fileID: 50005255313101632}
   m_Layer: 0
-  m_Name: ProjectileShot
+  m_Name: ProjectileShotGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   randomSpeed: 0
   SpeedV2: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
-  DamageOnHit: 1
+  DamageOnHit: 10
   solid_layer:
     serializedVersion: 2
     m_Bits: 256
@@ -165,8 +165,8 @@ MonoBehaviour:
     m_Bits: 512
   HitFxPrefab: {fileID: 1109302866432494, guid: d1657ebb3e0c70c488f50186799fe391, type: 3}
   DustFxPrefab: {fileID: 1975034529590746, guid: f82a2ebc69047864b9dbb8d24375a8e9, type: 2}
-  BounceOnCollide: 0
-  bouncesLeft: 0
+  BounceOnCollide: 1
+  bouncesLeft: 5
   owner: {fileID: 0}
   myCollider: {fileID: 61320119292746046}
   player: {fileID: 0}

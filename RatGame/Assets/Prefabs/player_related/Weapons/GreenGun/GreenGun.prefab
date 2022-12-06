@@ -80,7 +80,7 @@ MonoBehaviour:
   offsetNormal: {x: 0, y: 0}
   recoilForce: 4
   casingPrefab: {fileID: 0}
-  projectile: {fileID: 114311099708109720, guid: 38035907be1a22041bf973756acec292, type: 3}
+  projectile: {fileID: 114311099708109720, guid: 3458d420529d308458c43482429a5ce5, type: 3}
   muzzleFlash: {fileID: 0}
   Cooldown: 0.15
   WeaponUIIcon: {fileID: 21300000, guid: 19342c6555d6acc40a5233b705253acd, type: 3}
@@ -90,7 +90,7 @@ MonoBehaviour:
   spriteHolder: {fileID: 5166107451693436855}
   gunBarrel: {fileID: 5166009951591053999}
   owner: {fileID: 0}
-  randomAngle: 4
+  randomAngle: 10
 --- !u!1 &5162902299893429339
 GameObject:
   m_ObjectHideFlags: 0
