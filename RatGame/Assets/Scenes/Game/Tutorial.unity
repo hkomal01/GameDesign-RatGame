@@ -841,6 +841,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121511942}
   m_CullTransparentMesh: 1
+--- !u!95 &1183166940 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95062042337987900, guid: b6f335bec91ea448a9f264c0d0174026, type: 3}
+  m_PrefabInstance: {fileID: 1708414879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1191474071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1275,6 +1280,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4296427626876420, guid: b6f335bec91ea448a9f264c0d0174026, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95062042337987900, guid: b6f335bec91ea448a9f264c0d0174026, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114781790288172736, guid: b6f335bec91ea448a9f264c0d0174026, type: 3}
+      propertyPath: scrollAnimator
+      value: 
+      objectReference: {fileID: 1183166940}
+    - target: {fileID: 212381442835821492, guid: b6f335bec91ea448a9f264c0d0174026, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 212381442835821492, guid: b6f335bec91ea448a9f264c0d0174026, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 212381442835821492, guid: b6f335bec91ea448a9f264c0d0174026, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212381442835821492, guid: b6f335bec91ea448a9f264c0d0174026, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
