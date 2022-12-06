@@ -33,10 +33,13 @@ public class easyEnemy : MonoBehaviour
     private GameObject grid;
     private GameObject exit;
 
+    private Vector3 last_update;
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        last_update = transform.position;
     }
 
     // Start is called before the first frame update
@@ -49,14 +52,33 @@ public class easyEnemy : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        // Debug.Log("x_pos1:  " + last_update.x);
+        // Debug.Log("x_pos2:  " + transform.position.x + "\n");
 
+        
         if(target) {
             Vector3 direction = (target.position - transform.position).normalized;
+
+            // if (Math.Abs(Math.Abs(transform.position.x) - Math.Abs(last_update.x)) <= 0.1) {
+            //     Debug.Log("Stuck x");
+            //     direction = new Vector3(direction.x, direction.y + 10.0f, 0.0f).normalized;
+
+            
+            // } else if (Math.Abs(Math.Abs(transform.position.y) - Math.Abs(last_update.y)) <= 0.1) {
+            //     Debug.Log("Stuck y");
+            //     direction = new Vector3(transform.position.x * 2.0f, transform.position.y, 0.0f).normalized;
+
+            // }else {
+            //     Debug.Log("Free");
+            // }
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            
+           
             //rb.rotation = angle;
             currentAngle = angle;
             moveDirection = direction;
         }
+
 
 
         // if(timer > fireDelay){
@@ -84,11 +106,14 @@ public class easyEnemy : MonoBehaviour
         if(target) {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
+        last_update = transform.position;
+
     }
 
     void UpdateSprite() {
 		var targetScale = Facing == Facings.Right ? new Vector3(1f,1f,1f) : new Vector3(-1f,1f,1f);
 		transform.localScale = targetScale;
+
     }
 
     public void TakeDamage(float damageAmount)
