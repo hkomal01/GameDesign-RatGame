@@ -180,7 +180,7 @@ public class Player : Actor {
 
 		// crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, -65.0f));
 		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) > 50.0f) {
-			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, 4.0f));
+			crosshair.SetPos(Vector2.MoveTowards(crosshairHolder.transform.position, transform.position, 5.0f));
 		}
 
 		if (Vector2.Distance(transform.position, crosshairHolder.transform.position) < 35.0f) {
