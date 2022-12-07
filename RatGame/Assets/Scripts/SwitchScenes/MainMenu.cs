@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     void Start() {
         Cursor.lockState = CursorLockMode.None;
+        PlayerPrefs.SetFloat("Sensitivity", 1f);
+
         Update();
     }
 
@@ -16,6 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame() {
         PlayerPrefs.SetFloat("Health", 4);
+        
         SceneManager.LoadScene("Level-1-1");
     }
 

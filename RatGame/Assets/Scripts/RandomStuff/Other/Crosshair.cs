@@ -5,12 +5,13 @@ using UnityEngine;
 public class Crosshair : MonoBehaviour {
 
 	private Vector3 MouseCoords;
-	public float MouseSensitivity = 1f;
-
+	public float MouseSensitivity = 2f;
+	
 	void Update () {
 		// MouseCoords = Input.mousePosition;
 		// MouseCoords = Camera.main.ScreenToWorldPoint (MouseCoords);
-		MouseCoords = new Vector3(Input.GetAxis("Mouse X") * 2.0f, Input.GetAxis("Mouse Y") * 2.0f, 0.0f);
+		MouseSensitivity = getSensitivity();
+		MouseCoords = new Vector3(Input.GetAxis("Mouse X") * MouseSensitivity, Input.GetAxis("Mouse Y") * MouseSensitivity, 0.0f);
 		// if (MouseCoords.x != 0)
 
 		MouseCoords.x = (MouseCoords.x) + transform.position.x;
@@ -22,6 +23,16 @@ public class Crosshair : MonoBehaviour {
 
 
 		transform.position = Vector2.Lerp (transform.position, MouseCoords, MouseSensitivity);
+	}
+
+	public void setSensitivity(float value) {
+        PlayerPrefs.SetFloat("Sensitivity", value);
+		MouseSensitivity = value;
+		Debug.Log("sensitivity: " + MouseSensitivity);
+	}
+
+	private float getSensitivity() {
+		return PlayerPrefs.GetFloat("Sensitivity");
 	}
 
 	public void SetPos (Vector2 new_pos) {
