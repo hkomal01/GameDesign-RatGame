@@ -18,7 +18,7 @@ public class TutorialUI : MonoBehaviour
 
     //public GameHandler gameHandler;
 
-    public float waitTime = .3f;
+    public float waitTime = 0.0f;
     public float tutorialIndex = 0;
     public bool taskFinished = false;
 
@@ -44,7 +44,7 @@ public class TutorialUI : MonoBehaviour
                     text.text = "welcome to tutorial!";
                     tutorialUI.SetActive(true);
                     tutorialIndex++;
-                    waitTime = 3f;
+                    waitTime = 0.01f;
             } else if(tutorialIndex == 1) {
                 if(waitTime > 0) {
                     waitTime -= Time.deltaTime;
@@ -53,7 +53,7 @@ public class TutorialUI : MonoBehaviour
                     text.text = "use WASD to move, left mouse to shoot, esc to call pause menu";
                     tutorialUI.SetActive(true);
                     tutorialIndex++;
-                    waitTime = 3f;
+                    waitTime = .01f;
                 }
             } else if(tutorialIndex == 2) {
                 if(waitTime > 0) {
@@ -63,7 +63,7 @@ public class TutorialUI : MonoBehaviour
                     text.text = "enemy bullet and enemy touch will cause damage";
                     tutorialUI.SetActive(true);
                     tutorialIndex++;
-                    waitTime = 3f;
+                    waitTime = .01f;
                 }
             } else if(tutorialIndex == 3) {
                 if(waitTime > 0) {
@@ -73,7 +73,7 @@ public class TutorialUI : MonoBehaviour
                     text.text = "door is located on side of the map and will open when all the enemies are killed";
                     tutorialUI.SetActive(true);
                     tutorialIndex++;
-                    waitTime = 3f;
+                    waitTime = .01f;
                 }
             } else if(tutorialIndex == 4) {
                 if(waitTime > 0) {
@@ -83,7 +83,7 @@ public class TutorialUI : MonoBehaviour
                     text.text = "health is located on the upper left corner, silver heart in game is the health portion";
                     tutorialUI.SetActive(true);
                     tutorialIndex++;
-                    waitTime = 3f;
+                    waitTime = .01f;
                 }
             } else if(tutorialIndex == 5) {
                 if(waitTime > 0) {
@@ -93,7 +93,7 @@ public class TutorialUI : MonoBehaviour
                     text.text = "press E to pick up any weapon on ground!";
                     tutorialUI.SetActive(true);
                     tutorialIndex++;
-                    waitTime = 3f;
+                    waitTime = .01f;
                 }
             }
         
