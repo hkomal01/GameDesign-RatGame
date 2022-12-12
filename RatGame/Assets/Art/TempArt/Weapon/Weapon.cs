@@ -30,6 +30,7 @@ public class Weapon : MonoBehaviour {
 	public Transform spriteHolder, gunBarrel;
 
 	public Health owner;
+	public string gunName;
 
 	protected float currentAngle = 0f;
 	public float randomAngle = 20;

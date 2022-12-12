@@ -54,6 +54,8 @@ MonoBehaviour:
   actionToTrigger: 3
   wep: {fileID: 114841307507647198, guid: ad57be267188e41b9ba1648d64b3f91f, type: 3}
   scrollAnimator: {fileID: 9011496318933268072}
+  pickup: {fileID: 9063836381358550420}
+  sprite: {fileID: 9127885096791297630}
 --- !u!61 &8972927241305797768
 BoxCollider2D:
   m_ObjectHideFlags: 0

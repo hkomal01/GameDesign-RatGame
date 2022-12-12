@@ -90,6 +90,7 @@ MonoBehaviour:
   spriteHolder: {fileID: 5166107451693436855}
   gunBarrel: {fileID: 5166009951591053999}
   owner: {fileID: 0}
+  gunName: ThunderGun
   randomAngle: 0
 --- !u!1 &5162902299893429339
 GameObject:

@@ -54,6 +54,11 @@ MonoBehaviour:
   actionToTrigger: 3
   wep: {fileID: 5059524363170188813, guid: 1b3d06467017542459c9f6fbb7b160ca, type: 3}
   scrollAnimator: {fileID: 9011496318933268072}
+  yellow: {fileID: 9063836381358550420, guid: 853c93ca4e403f84f8efba3c88f85ea7, type: 3}
+  purple: {fileID: 9063836381358550420}
+  green: {fileID: 9063836381358550420, guid: 430bf1d7eea967b489ca2a3a99f7e4c1, type: 3}
+  orange: {fileID: 9063836381358550420, guid: f4e6412746017f043a403fee25695550, type: 3}
+  thunder: {fileID: 9063836381358550420, guid: e41f0108d70d84c41a79f4145cc213fb, type: 3}
 --- !u!61 &8972927241305797768
 BoxCollider2D:
   m_ObjectHideFlags: 0

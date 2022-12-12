@@ -6,6 +6,12 @@ public class WeaponPickup : Interactable {
 
 	public Weapon wep;
 	public Animator scrollAnimator;
+	public WeaponPickup yellow;
+	public WeaponPickup purple;
+	public WeaponPickup green;
+	public WeaponPickup orange;
+	public WeaponPickup thunder;
+	//public SpriteRenderer sprite;
 
 	new void Update () {
 		if (!wasInside && isInside) {
@@ -36,7 +42,25 @@ public class WeaponPickup : Interactable {
 	protected override void OnPlayerTrigger (Player player)
 	{
 		base.OnPlayerTrigger (player);
+		//WeaponPickup newPick = Instantiate(pickup, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation) as WeaponPickup;
+		//newPick.sprite.GetComponent<SpriteRenderer>().sprite = player.weapon.spriteRenderer.GetComponent<SpriteRenderer>().sprite;
+		//Weapon pWep = Instantiate(player.weapon, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation) as Weapon;
+		//pWep.enabled = false;
+		//newPick.wep = pWep;
+		string name = player.weapon.gunName;
+		if (name == "YellowGun") {
+			Instantiate(yellow, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+		} else if (name == "PurpleGun") {
+			Instantiate(purple, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+		} else if (name == "OrangeGun") {
+			Instantiate(orange, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+		} else if (name == "GreenGun") {
+			Instantiate(green, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+		} else if (name == "ThunderGun") {
+			Instantiate(thunder, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+		}
+
 		player.EquipWeapon (wep);
 		Destroy (gameObject);
-	}
+	} 
 }

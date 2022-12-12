@@ -59,6 +59,7 @@ MonoBehaviour:
   spriteHolder: {fileID: 4228053146951024}
   gunBarrel: {fileID: 4436046052967046}
   owner: {fileID: 0}
+  gunName: YellowGun
   randomAngle: 20
 --- !u!1 &1679163176027626
 GameObject:
