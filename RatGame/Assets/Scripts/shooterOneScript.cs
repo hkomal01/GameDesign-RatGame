@@ -7,6 +7,9 @@ using UnityEngine.Events;
 
 public class shooterOneScript : MonoBehaviour
 {
+    [Header ("Animator")]
+	public Animator animator;
+
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
     Transform target;
@@ -114,6 +117,7 @@ public class shooterOneScript : MonoBehaviour
         //         Debug.Log("Could not find Exit door.");
         //     }
         // }
-        Destroy(gameObject);
+        animator.Play("Death");
+        Destroy(gameObject, 1);
     }
 }

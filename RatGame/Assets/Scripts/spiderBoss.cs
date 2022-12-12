@@ -6,6 +6,10 @@ using UnityEngine.Events;
 
 public class spiderBoss : MonoBehaviour
 {
+
+    [Header ("Animator")]
+	public Animator animator;
+
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
     Transform target;
@@ -102,6 +106,7 @@ public class spiderBoss : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
+        animator.Play("Death");
+        Destroy(gameObject, 1);
     }
 }

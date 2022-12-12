@@ -3,10 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-//using MonsterLove.StateMachine;
+using MonsterLove.StateMachine;
 
 public class easyEnemy : MonoBehaviour
 {
+
+    [Header ("Animator")]
+	public Animator animator;
+
+    public enum States {
+		Normal, 
+		Dead
+	}
+
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
     Transform target;
@@ -35,11 +44,15 @@ public class easyEnemy : MonoBehaviour
 
     private Vector3 last_update;
 
+    public StateMachine<States> fsm;
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         last_update = transform.position;
+
+        fsm = StateMachine<States>.Initialize(this);
     }
 
     // Start is called before the first frame update
@@ -114,6 +127,13 @@ public class easyEnemy : MonoBehaviour
 		var targetScale = Facing == Facings.Right ? new Vector3(1f,1f,1f) : new Vector3(-1f,1f,1f);
 		transform.localScale = targetScale;
 
+        if (fsm.State == States.Dead) {
+			if (!animator.GetCurrentAnimatorStateInfo (0).IsName ("Death")) {
+				animator.Play ("Death");
+			}
+		
+		}
+
     }
 
     public void TakeDamage(float damageAmount)
@@ -141,6 +161,8 @@ public class easyEnemy : MonoBehaviour
         //         Debug.Log("Could not find Exit door.");
         //     }
         // }
-        Destroy(gameObject);
+        animator.Play("Death");
+        Destroy(gameObject, 1);
     }
+
 }
