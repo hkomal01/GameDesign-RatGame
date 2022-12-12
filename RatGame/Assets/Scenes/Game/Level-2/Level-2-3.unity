@@ -268,6 +268,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 580160004632866040, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: x_pos
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 580160004632866040, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: y_pos
+      value: 89
+      objectReference: {fileID: 0}
+    - target: {fileID: 580160004632866040, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5212314911171027215, guid: f316b2cc1f4a115498b32e49b293a292, type: 3}
+    - target: {fileID: 580160004632866040, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: new_scene
       value: Level-2-2
       objectReference: {fileID: 0}
@@ -335,6 +347,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: x_pos
+      value: 545
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: y_pos
+      value: -68
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5212314911171027215, guid: f316b2cc1f4a115498b32e49b293a292, type: 3}
     - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: new_scene
       value: Level-2-2
