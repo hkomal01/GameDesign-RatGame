@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 580160004632866040, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: y_pos
-      value: 89
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 580160004632866040, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: player
@@ -349,11 +349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: x_pos
-      value: 545
+      value: 423
       objectReference: {fileID: 0}
     - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: y_pos
-      value: -68
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: player
@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 5212314911171027215, guid: f316b2cc1f4a115498b32e49b293a292, type: 3}
     - target: {fileID: 5552883842080837514, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: new_scene
-      value: Level-2-2
+      value: Level-2-4
       objectReference: {fileID: 0}
     - target: {fileID: 5552883842080837521, guid: cb2c52f9c05fe2e4a8a403c38d29ae38, type: 3}
       propertyPath: m_Size.x

@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
 	}	
 
 	public void RestartScene () {
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene ("Lose");
 	}
 
 	public void SpawnPopup (Vector2 position) {
