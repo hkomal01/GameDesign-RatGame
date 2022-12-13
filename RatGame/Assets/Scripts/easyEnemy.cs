@@ -105,8 +105,10 @@ public class easyEnemy : MonoBehaviour
 
 		if (currentAngle > 270 || currentAngle < 90) {
             Facing = Facings.Right;
+            //transform.localScale = new Vector3(1,1,1);
 		} else {
 			Facing = Facings.Left;
+            //transform.localScale = new Vector3(-1,1,1);
 		}
 
         // if (weapon != null) {
@@ -123,16 +125,14 @@ public class easyEnemy : MonoBehaviour
 
     }
 
-    void UpdateSprite() {
-		var targetScale = Facing == Facings.Right ? new Vector3(1f,1f,1f) : new Vector3(-1f,1f,1f);
-		transform.localScale = targetScale;
+    void LateUpdate() {
+        UpdateSprite();
+    }
 
-        if (fsm.State == States.Dead) {
-			if (!animator.GetCurrentAnimatorStateInfo (0).IsName ("Death")) {
-				animator.Play ("Death");
-			}
-		
-		}
+    void UpdateSprite() {
+
+        var targetScale = Facing == Facings.Right ? new Vector3(-4,4,0) : new Vector3(4,4,0);
+		transform.localScale = targetScale;
 
     }
 
@@ -162,7 +162,7 @@ public class easyEnemy : MonoBehaviour
         //     }
         // }
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
-
+        GetComponent<Collider2D>().enabled = false;
         animator.Play("Death");
         Destroy(gameObject, 1);
     }
