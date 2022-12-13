@@ -34,4 +34,8 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetFloat("Health", 4);
         SceneManager.LoadScene("Tutorial");
     }
+
+    public void Restart() {
+        SceneManager.LoadScene("Menu");
+    }
 }
