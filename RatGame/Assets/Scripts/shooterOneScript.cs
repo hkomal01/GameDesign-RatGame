@@ -34,6 +34,7 @@ public class shooterOneScript : MonoBehaviour
     private float timer;
     private GameObject grid;
     private GameObject exit;
+    private bool dead;
 
 
     private void Awake()
@@ -45,6 +46,7 @@ public class shooterOneScript : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Entity").transform;
+        dead = false;
     }
 
     // Update is called once per frame
@@ -60,7 +62,7 @@ public class shooterOneScript : MonoBehaviour
             moveDirection = direction;
         }
 
-        if(timer > fireDelay){
+        if(timer > fireDelay && !dead){
             timer = timer - fireDelay;
             shoot();
         }
@@ -122,6 +124,8 @@ public class shooterOneScript : MonoBehaviour
         //         Debug.Log("Could not find Exit door.");
         //     }
         // }
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        dead = true;
         animator.Play("Death");
         Destroy(gameObject, 1);
     }
