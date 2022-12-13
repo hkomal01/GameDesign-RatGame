@@ -47,17 +47,20 @@ public class WeaponPickup : Interactable {
 		//Weapon pWep = Instantiate(player.weapon, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation) as Weapon;
 		//pWep.enabled = false;
 		//newPick.wep = pWep;
-		string name = player.weapon.gunName;
-		if (name == "YellowGun") {
-			Instantiate(yellow, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
-		} else if (name == "PurpleGun") {
-			Instantiate(purple, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
-		} else if (name == "OrangeGun") {
-			Instantiate(orange, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
-		} else if (name == "GreenGun") {
-			Instantiate(green, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
-		} else if (name == "ThunderGun") {
-			Instantiate(thunder, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+		if (player.weapon != null){
+			string name = player.weapon.gunName;
+		
+			if (name == "YellowGun") {
+				Instantiate(yellow, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+			} else if (name == "PurpleGun") {
+				Instantiate(purple, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+			} else if (name == "OrangeGun") {
+				Instantiate(orange, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+			} else if (name == "GreenGun") {
+				Instantiate(green, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+			} else if (name == "ThunderGun") {
+				Instantiate(thunder, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+			}
 		}
 
 		player.EquipWeapon (wep);
