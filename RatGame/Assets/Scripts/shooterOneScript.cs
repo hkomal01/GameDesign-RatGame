@@ -87,8 +87,13 @@ public class shooterOneScript : MonoBehaviour
         }
     }
 
+    void LateUpdate()
+    {
+        UpdateSprite();
+    }
+
     void UpdateSprite () {
-		var targetScale = Facing == Facings.Right ? new Vector3(1f,1f,1f) : new Vector3(-1f,1f,1f);
+		var targetScale = Facing == Facings.Right ? new Vector3((float)1.25,(float)1.25,0) : new Vector3((float)-1.25,(float)1.25,0);
 		transform.localScale = targetScale;
     }
 
