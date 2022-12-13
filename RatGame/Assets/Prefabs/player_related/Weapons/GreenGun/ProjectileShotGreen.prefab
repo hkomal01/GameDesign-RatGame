@@ -152,11 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188ca0e9a5f99de439c937eedf56c7dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 600
+  baseSpeed: 800
   randomSpeed: 0
   SpeedV2: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
-  DamageOnHit: 10
+  DamageOnHit: 8
   solid_layer:
     serializedVersion: 2
     m_Bits: 256
