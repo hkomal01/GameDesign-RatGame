@@ -34,12 +34,16 @@ public class Weapon : MonoBehaviour {
 
 	protected float currentAngle = 0f;
 	public float randomAngle = 20;
+
+	public AudioSource audio;
 	
 	// Update is called once per frame
 	protected void Update () {
 		if (cooldownTimer > 0f) {
 			cooldownTimer -= Time.deltaTime;
 		}
+
+		audio = GameObject.FindGameObjectWithTag("Weapon").GetComponent<AudioSource>();
 	}
 
 	public bool TryToTriggerWeapon () {
@@ -58,6 +62,8 @@ public class Weapon : MonoBehaviour {
 			var c = Instantiate (casingPrefab, transform.position, Quaternion.identity);
 			c.facing = (int)transform.lossyScale.x;
 		}
+
+		audio.Play();
 
 		InstantiateMuzzleFlash ();
 		InstantiateProjectile ();

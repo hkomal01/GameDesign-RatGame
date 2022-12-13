@@ -9,6 +9,7 @@ TagManager:
   - Teleporter
   - Entities
   - Walls
+  - Weapon
   layers:
   - Default
   - TransparentFX
