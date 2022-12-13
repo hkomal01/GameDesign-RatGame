@@ -161,6 +161,8 @@ public class easyEnemy : MonoBehaviour
         //         Debug.Log("Could not find Exit door.");
         //     }
         // }
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+
         animator.Play("Death");
         Destroy(gameObject, 1);
     }
