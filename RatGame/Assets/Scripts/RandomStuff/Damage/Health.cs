@@ -63,6 +63,7 @@ public class Health : MonoBehaviour {
 			CameraShaker.instance.InitShake(0.125f, 1f);
 		}
 
+		Debug.Log("health: " + health);
 		return true;
 	}
 

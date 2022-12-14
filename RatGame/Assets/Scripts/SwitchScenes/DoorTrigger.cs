@@ -28,6 +28,8 @@ public class DoorTrigger : MonoBehaviour
             // string new_scene = "Level-1-3";
             SceneManager.LoadScene(new_scene);
             player.transform.position = new Vector3(x_pos, y_pos, 0);
+            GameObject ch = GameObject.Find("Crosshair");
+            ch.transform.position = new Vector3(x_pos, y_pos, 0);
             Destroy(gameObject);
         }
     }

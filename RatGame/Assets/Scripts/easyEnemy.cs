@@ -138,7 +138,9 @@ public class easyEnemy : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        // print("damage");
+        
+        // Debug.Log("Health: " + PlayerPrefs.GetFloat("Health"));
+
     }
 
     // void shoot()
