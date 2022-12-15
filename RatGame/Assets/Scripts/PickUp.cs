@@ -34,7 +34,7 @@ public class PickUp : Interactable {
 	{
 		base.OnPlayerTrigger (player);
 
-		onPickup.Invoke();
+		if (onPickup != null) onPickup.Invoke();
 
 		health.GetComponent<Health>().TakeHeal(1);
 		PlayerPrefs.SetFloat("Health", (int)PlayerPrefs.GetFloat("Health") + 1);
