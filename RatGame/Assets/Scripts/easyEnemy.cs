@@ -46,6 +46,10 @@ public class easyEnemy : MonoBehaviour
 
     public StateMachine<States> fsm;
 
+    [Header ("Trigger")]
+    private bool trig;
+    public enemyTrigger areaTrig;
+
 
     private void Awake()
     {
@@ -59,6 +63,7 @@ public class easyEnemy : MonoBehaviour
     void Start()
     {
         target = GameObject.Find("Player").transform;
+        trig = false;
     }
 
     // Update is called once per frame
@@ -68,8 +73,9 @@ public class easyEnemy : MonoBehaviour
         // Debug.Log("x_pos1:  " + last_update.x);
         // Debug.Log("x_pos2:  " + transform.position.x + "\n");
 
-        
-        if(target) {
+        trig = areaTrig.trigger;
+
+        if(target && trig) {
             Vector3 direction = (target.position - transform.position).normalized;
 
             // if (Math.Abs(Math.Abs(transform.position.x) - Math.Abs(last_update.x)) <= 0.1) {
