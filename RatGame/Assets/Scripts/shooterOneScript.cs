@@ -36,11 +36,6 @@ public class shooterOneScript : MonoBehaviour
     private GameObject exit;
     private bool dead;
 
-    [Header ("Trigger")]
-    private bool trig;
-    public enemyTrigger areaTrig;
-
-
 
     private void Awake()
     {
@@ -52,30 +47,24 @@ public class shooterOneScript : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Entity").transform;
         dead = false;
-        trig = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        trig = areaTrig.trigger;
+        timer += Time.deltaTime;
 
-        if (trig) 
-        {
-            timer += Time.deltaTime;
+        if(target) {
+            Vector3 direction = (target.position - transform.position).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            //rb.rotation = angle;
+            currentAngle = angle;
+            moveDirection = direction;
+        }
 
-            if(target) {
-                Vector3 direction = (target.position - transform.position).normalized;
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                //rb.rotation = angle;
-                currentAngle = angle;
-                moveDirection = direction;
-            }
-
-            if(timer > fireDelay && !dead){
-                timer = timer - fireDelay;
-                shoot();
-            }
+        if(timer > fireDelay && !dead){
+            timer = timer - fireDelay;
+            shoot();
         }
 
         if (currentAngle < 0) {

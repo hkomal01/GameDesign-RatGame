@@ -156,7 +156,7 @@ MonoBehaviour:
   randomSpeed: 0
   SpeedV2: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
-  DamageOnHit: 1000
+  DamageOnHit: 10
   solid_layer:
     serializedVersion: 2
     m_Bits: 256

@@ -12,13 +12,7 @@ public class WeaponPickup : Interactable {
 	public WeaponPickup green;
 	public WeaponPickup orange;
 	public WeaponPickup thunder;
-	public Crosshair cross;
-	private GameObject p;
-
-	void Start() {
-		p = GameObject.FindWithTag("Entity");
-		cross = p.GetComponent<Player>().crosshair;
-	}
+	//public SpriteRenderer sprite;
 
 	new void Update () {
 		if (!wasInside && isInside) {
@@ -54,26 +48,20 @@ public class WeaponPickup : Interactable {
 		//Weapon pWep = Instantiate(player.weapon, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation) as Weapon;
 		//pWep.enabled = false;
 		//newPick.wep = pWep;
-		
-		cross.nameCross = wep.gunName;
-
 		if (player.weapon != null){
 			string name = player.weapon.gunName;
-			WeaponPickup inst = null;
-			
+		
 			if (name == "YellowGun") {
-				inst  = Instantiate(yellow, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+				Instantiate(yellow, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
 			} else if (name == "PurpleGun") {
-				inst  = Instantiate(purple, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+				Instantiate(purple, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
 			} else if (name == "OrangeGun") {
-				inst  = Instantiate(orange, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+				Instantiate(orange, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
 			} else if (name == "GreenGun") {
-				inst  = Instantiate(green, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+				Instantiate(green, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
 			} else if (name == "ThunderGun") {
-				inst  = Instantiate(thunder, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
+				Instantiate(thunder, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
 			}
-
-			inst.cross = player.crosshair;
 		}
 
 		player.EquipWeapon (wep);

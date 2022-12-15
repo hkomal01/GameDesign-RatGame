@@ -5,18 +5,8 @@ using UnityEngine;
 public class Crosshair : MonoBehaviour {
 
 	private Vector3 MouseCoords;
-	private SpriteRenderer rend;
-	public Sprite graySpr, greenSpr, purpleSpr, thunderSpr, orangeSpr, yellowSpr;
 	public float MouseSensitivity = 2f;
-	public Player play;
-	public string nameCross = "gray";
 	
-	void Start()
-	{
-		rend = GetComponent<SpriteRenderer>();
-		rend.sprite = graySpr;
-	}
-
 	void Update () {
 		// MouseCoords = Input.mousePosition;
 		// MouseCoords = Camera.main.ScreenToWorldPoint (MouseCoords);
@@ -33,21 +23,6 @@ public class Crosshair : MonoBehaviour {
 
 
 		transform.position = Vector2.Lerp (transform.position, MouseCoords, MouseSensitivity);
-	}
-
-	void LateUpdate() 
-	{
-			if (nameCross == "YellowGun") {
-				rend.sprite = yellowSpr;
-			} else if (nameCross == "PurpleGun") {
-				rend.sprite = purpleSpr;
-			} else if (nameCross == "OrangeGun") {
-				rend.sprite = orangeSpr;
-			} else if (nameCross == "GreenGun") {
-				rend.sprite = greenSpr;
-			} else if (nameCross == "ThunderGun") {
-				rend.sprite = thunderSpr;
-			} 
 	}
 
 	public void setSensitivity(float value) {
