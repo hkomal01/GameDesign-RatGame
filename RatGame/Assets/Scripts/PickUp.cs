@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PickUp : Interactable {
 
 	public GameObject PickFxPrefab;
 	public GameObject health;
+	public UnityEvent onPickup;
 
 	void Start() {
 		health = GameObject.Find("Player");
@@ -31,6 +33,8 @@ public class PickUp : Interactable {
 	protected override void OnPlayerTrigger (Player player)
 	{
 		base.OnPlayerTrigger (player);
+
+		onPickup.Invoke();
 
 		health.GetComponent<Health>().TakeHeal(1);
 		PlayerPrefs.SetFloat("Health", (int)PlayerPrefs.GetFloat("Health") + 1);
