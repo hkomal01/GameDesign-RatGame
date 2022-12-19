@@ -15,6 +15,9 @@ public class mothBoss : MonoBehaviour
 		Dead
 	}
 
+    [Header ("Audio")]
+    public AudioSource mothTele;
+
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
     Transform target;
@@ -54,6 +57,8 @@ public class mothBoss : MonoBehaviour
     [Header ("Trigger")]
     private bool trig;
     public enemyTrigger areaTrig;
+
+    private bool tele = false;
 
     private void Awake()
     {
@@ -99,7 +104,10 @@ public class mothBoss : MonoBehaviour
             currentAngle = angle;
             moveDirection = direction;
         }
-
+        if (timer > dashDelay - 1 && target && trig && !tele) {
+            mothTele.Play();
+            tele = true;
+        }
         if(timer > dashDelay && target && trig){
             timer = timer - dashDelay;
             dash();
@@ -108,6 +116,7 @@ public class mothBoss : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             currentAngle = angle;
             moveDirection = direction;
+            tele = false;
         }
 
     }
