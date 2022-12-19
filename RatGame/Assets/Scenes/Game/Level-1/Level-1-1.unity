@@ -1246,6 +1246,10 @@ PrefabInstance:
       propertyPath: crosshairHolder
       value: 
       objectReference: {fileID: 401724293}
+    - target: {fileID: 1066737324174605821, guid: 19cfbf0d9282b430792f7c363bbdf65e, type: 3}
+      propertyPath: invincibleTimeOnHit
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1104860550843890655, guid: 19cfbf0d9282b430792f7c363bbdf65e, type: 3}
       propertyPath: m_RootOrder
       value: 6

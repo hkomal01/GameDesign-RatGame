@@ -228,7 +228,7 @@ MonoBehaviour:
   dead: 0
   invincible: 0
   becomeInvincibleOnHit: 1
-  invincibleTimeOnHit: 0.5
+  invincibleTimeOnHit: 1
   DieEventsAfterTime: 0
 --- !u!114 &5977957510208103152
 MonoBehaviour:
