@@ -21,6 +21,10 @@ public class ratKing : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
 
+    [Header ("Sounds")]
+    public AudioSource phaseTransform;
+    public AudioSource dashTele;
+
     [Header ("Facing Direction")]
 	public Facings Facing;
 
@@ -60,6 +64,7 @@ public class ratKing : MonoBehaviour
     private GameObject body1;
     private GameObject body2;
     private bool dashing = false;
+    private bool tele = false;
 
     private Vector3 last_update;
 
@@ -102,6 +107,7 @@ public class ratKing : MonoBehaviour
             body1.SetActive(false);
             timer2 = 0;
             timer1 = 0;
+            phaseTransform.Play();
             moveSpeed = 60;
         }
 
@@ -126,10 +132,15 @@ public class ratKing : MonoBehaviour
                 timer1 = timer1 - 1;
                 dashing = false;
             }
+            if (timer2 > dashDelay - 1 && !dead && phase2 && !tele) {
+                dashTele.Play();
+                tele = true;
+            }
             if(timer2 > dashDelay && !dead && phase2){
                 timer2 = timer2 - dashDelay;
                 dash();
                 dashing = true;
+                tele = false;
             }
         }
 
