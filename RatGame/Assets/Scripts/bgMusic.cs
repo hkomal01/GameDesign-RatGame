@@ -12,20 +12,27 @@ public class bgMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject bossGameplay = GameObject.Find("bossGameplay");
-        if(bossGameplay) boss = true;
-        if (boss) {
-            bs = bossGameplay.GetComponent<AudioSource>();
-            bg.Pause();
-            bs.Play();
-        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        entities = GameObject.FindGameObjectsWithTag("Entities");	
-		if (entities.Length == 0 && boss) {
+        GameObject bossGameplay = GameObject.Find("bossGameplay");
+        GameObject winner = GameObject.Find("winner");
+        GameObject loser = GameObject.Find("loser");
+        entities = GameObject.FindGameObjectsWithTag("Entities");
+        int len = entities.Length;
+        if(winner || loser) {
+            bg.Pause();
+        }
+        if(bossGameplay != null && !boss && len > 0) {
+            boss = true;
+            bs = bossGameplay.GetComponent<AudioSource>();
+            bg.Pause();
+            bs.Play();
+        }
+		if (len == 0 && boss) {
             bs.Pause();
             bg.Play();
             boss = false;
