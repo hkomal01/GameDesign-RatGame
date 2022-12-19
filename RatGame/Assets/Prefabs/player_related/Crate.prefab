@@ -104,8 +104,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  maxHealth: 20
-  health: 20
+  maxHealth: 40
+  health: 40
   dead: 0
   invincible: 0
   becomeInvincibleOnHit: 0
