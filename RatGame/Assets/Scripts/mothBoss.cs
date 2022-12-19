@@ -110,17 +110,6 @@ public class mothBoss : MonoBehaviour
             moveDirection = direction;
         }
 
-        // if (currentAngle < 0) {
-		// 	currentAngle += 360f;
-		// }
-
-		// if (currentAngle > 270 || currentAngle < 90) {
-        //     Facing = Facings.Right;
-        //     //transform.localScale = new Vector3(1,1,1);
-		// } else {
-		// 	Facing = Facings.Left;
-        //     //transform.localScale = new Vector3(-1,1,1);
-		// }
     }
 
     void FixedUpdate()

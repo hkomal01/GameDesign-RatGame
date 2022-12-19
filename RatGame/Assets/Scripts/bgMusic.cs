@@ -19,8 +19,13 @@ public class bgMusic : MonoBehaviour
     void Update()
     {
         GameObject bossGameplay = GameObject.Find("bossGameplay");
+        GameObject winner = GameObject.Find("winner");
+        GameObject loser = GameObject.Find("loser");
         entities = GameObject.FindGameObjectsWithTag("Entities");
         int len = entities.Length;
+        if(winner || loser) {
+            bg.Pause();
+        }
         if(bossGameplay != null && !boss && len > 0) {
             boss = true;
             bs = bossGameplay.GetComponent<AudioSource>();

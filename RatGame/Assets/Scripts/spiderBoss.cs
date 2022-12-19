@@ -35,6 +35,10 @@ public class spiderBoss : MonoBehaviour
     private GameObject grid;
     private GameObject exit;
 
+    [Header ("Trigger")]
+    private bool trig;
+    public enemyTrigger areaTrig;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +47,7 @@ public class spiderBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        trig = false;
         target = GameObject.FindGameObjectWithTag("Entity").transform;
     }
 
@@ -51,7 +56,8 @@ public class spiderBoss : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(target) {
+        trig = areaTrig.trigger;
+        if(target && trig) {
             Vector3 direction = (target.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             //rb.rotation = angle;
@@ -59,7 +65,7 @@ public class spiderBoss : MonoBehaviour
             moveDirection = direction;
         }
 
-        if(timer > fireDelay){
+        if(timer > fireDelay && trig){
             timer = timer - fireDelay;
             shoot();
         }
