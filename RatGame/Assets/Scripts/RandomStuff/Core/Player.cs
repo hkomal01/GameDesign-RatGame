@@ -132,11 +132,9 @@ public class Player : Actor {
 
         if (grid) {
             exit = grid.transform.Find("ExitDoor_TM").gameObject;
-            enter = grid.transform.Find("EnterDoor_TM").gameObject;
 
             if (exit) {
                 exit.gameObject.SetActive(true);
-                enter.gameObject.SetActive(true);
             } else {
                 Debug.Log("Could not find Exit door.");
             }
