@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2324946594952982344, guid: 106077b046f50ce459ae2d31228f10ca, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setSFXLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 2346601148558216672, guid: 106077b046f50ce459ae2d31228f10ca, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -312,6 +316,10 @@ PrefabInstance:
     - target: {fileID: 5510626160047806951, guid: 106077b046f50ce459ae2d31228f10ca, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734221272491398558, guid: 106077b046f50ce459ae2d31228f10ca, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setMusicLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6787437387797929069, guid: 106077b046f50ce459ae2d31228f10ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -363,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9071567821318568869, guid: 106077b046f50ce459ae2d31228f10ca, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9071567821318568869, guid: 106077b046f50ce459ae2d31228f10ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -749,7 +757,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &787336468
 MonoBehaviour:
@@ -895,7 +903,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &935742679 stripped
 GameObject:
@@ -1020,7 +1028,7 @@ RectTransform:
   - {fileID: 6146311}
   - {fileID: 1397930626}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
