@@ -59,6 +59,7 @@ MonoBehaviour:
   green: {fileID: 9063836381358550420, guid: 430bf1d7eea967b489ca2a3a99f7e4c1, type: 3}
   orange: {fileID: 9063836381358550420, guid: f4e6412746017f043a403fee25695550, type: 3}
   thunder: {fileID: 9063836381358550420}
+  cross: {fileID: 0}
 --- !u!61 &8972927241305797768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83,7 +84,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20, y: 10}
+  m_Size: {x: 30, y: 15}
   m_EdgeRadius: 0
 --- !u!1 &8960138086001984470
 GameObject:

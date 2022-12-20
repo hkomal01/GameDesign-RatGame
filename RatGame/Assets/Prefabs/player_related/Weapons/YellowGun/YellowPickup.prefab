@@ -60,12 +60,6 @@ MonoBehaviour:
   orange: {fileID: 9063836381358550420, guid: f4e6412746017f043a403fee25695550, type: 3}
   thunder: {fileID: 9063836381358550420, guid: e41f0108d70d84c41a79f4145cc213fb, type: 3}
   cross: {fileID: 0}
-  graySpr: {fileID: 21300000, guid: 1b6ce812b4936824cb11d8b98f07ed52, type: 3}
-  greenSpr: {fileID: 21300000, guid: 7e370b81fa9431b49bec9a0bd59176c5, type: 3}
-  purpleSpr: {fileID: 21300000, guid: bf965adfca3a957479a30acf4dc535eb, type: 3}
-  thunderSpr: {fileID: 21300000, guid: 85baef24b1371ca45ae6daf0f247141d, type: 3}
-  orangeSpr: {fileID: 21300000, guid: 8a022d58508d8db428b197931662a359, type: 3}
-  yellowSpr: {fileID: 21300000, guid: 370284b700795584082f01869ebd9d5d, type: 3}
 --- !u!61 &8972927241305797768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90,7 +84,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20, y: 10}
+  m_Size: {x: 30, y: 15}
   m_EdgeRadius: 0
 --- !u!1 &8960138086001984470
 GameObject:
