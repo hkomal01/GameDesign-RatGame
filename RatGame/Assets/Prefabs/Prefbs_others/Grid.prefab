@@ -240,13 +240,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5440140604904383425}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d70c5dec2de4311a99903f953e5654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   new_scene: Level-1-3
-  gameObject: {fileID: 0}
+  x_pos: 0
+  y_pos: 0
+  player: {fileID: 0}
 --- !u!1 &5552883842080837512
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +525,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   new_scene: Level-1-2
-  gameObject: {fileID: 0}
+  x_pos: 0
+  y_pos: 0
+  player: {fileID: 0}
 --- !u!1 &5552883842870565669
 GameObject:
   m_ObjectHideFlags: 0
