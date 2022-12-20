@@ -1277,6 +1277,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 985974704224187561, guid: 19cfbf0d9282b430792f7c363bbdf65e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1066548042234367077, guid: 19cfbf0d9282b430792f7c363bbdf65e, type: 3}
       propertyPath: crosshair
       value: 
