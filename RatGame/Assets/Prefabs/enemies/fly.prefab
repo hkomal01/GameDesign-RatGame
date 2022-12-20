@@ -179,6 +179,7 @@ MonoBehaviour:
   gunBarrel: {fileID: 863959451826443103}
   weapon: {fileID: 773677108870877720}
   randomAngle: 20
+  areaTrig: {fileID: 0}
 --- !u!50 &1594205675837281285
 Rigidbody2D:
   serializedVersion: 4
@@ -245,6 +246,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6044854910039248658}
+        m_TargetAssemblyTypeName: shooterOneScript, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
