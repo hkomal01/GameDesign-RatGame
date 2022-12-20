@@ -57,6 +57,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/Level-3/Level-3-5.unity
     guid: 665ce89e788374bad9c26aae41b6a302
   - enabled: 1
+    path: Assets/Scenes/Game/Level-3/Level-3-6.unity
+    guid: 956955dcb07433b4fba758011c36511e
+  - enabled: 1
     path: Assets/Scenes/Game/Tutorial.unity
     guid: d895ae39b45224d52a56e473c148b699
   - enabled: 1
