@@ -147,7 +147,9 @@ public class easyEnemy : MonoBehaviour
         
         // Debug.Log("Health: " + PlayerPrefs.GetFloat("Health"));
         moveDirection = rb.transform.position - target.position;
-        rb.AddForce(moveDirection.normalized * -500f);
+        // Debug.Log("direction: " + moveDirection.normalized);
+
+        rb.AddForce(moveDirection.normalized * -300f);
 
     }
 

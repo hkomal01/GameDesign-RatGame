@@ -112,7 +112,9 @@ public class shooterOneScript : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        print("damage");
+        // print("damage");
+        moveDirection = rb.transform.position - target.position;
+        rb.AddForce(moveDirection.normalized * -300f);
     }
 
     void shoot()
