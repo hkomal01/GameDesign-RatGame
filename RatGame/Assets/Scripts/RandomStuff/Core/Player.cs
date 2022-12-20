@@ -111,10 +111,6 @@ public class Player : Actor {
 			value = gamepad.leftStick.ReadValue();
 		}
 
-		
-
-
-
 		if (rollCooldownTimer > 0f) {
 			rollCooldownTimer -= Time.deltaTime;
 		}

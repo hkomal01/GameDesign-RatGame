@@ -14,6 +14,7 @@ public class WeaponPickup : Interactable {
 	public WeaponPickup thunder;
 	public Crosshair cross;
 	private GameObject p;
+	private WeaponPickup inst; 
 
 	void Start() {
 		p = GameObject.FindWithTag("Entity");
@@ -59,7 +60,11 @@ public class WeaponPickup : Interactable {
 
 		if (player.weapon != null){
 			string name = player.weapon.gunName;
-			WeaponPickup inst = null;
+
+			if(name == wep.gunName){
+				Pickable = true;
+				return;
+			}
 			
 			if (name == "YellowGun") {
 				inst  = Instantiate(yellow, new Vector2(player.transform.position.x, player.transform.position.y), transform.rotation);
