@@ -58,7 +58,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fe143cb54c5474731b63b89e860b8b78, type: 3}
   spriteRenderer: {fileID: 212229841078063876}
   myCollider: {fileID: 61321363457054224}
-  DestroyFX: {fileID: 1105501387792704, guid: b4fbc3525db8d814c88ca2a433681082, type: 2}
+  DestroyFX: {fileID: 1105501387792704, guid: b4fbc3525db8d814c88ca2a433681082, type: 3}
 --- !u!114 &114452273135519950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1}
+  m_Offset: {x: 0.16860485, y: -1.1204319}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14, y: 14}
+  m_Size: {x: 15.975088, y: 16.07143}
   m_EdgeRadius: 0
 --- !u!1 &1259850209057078
 GameObject:
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4123366310671048}
   - component: {fileID: 61927333206246848}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: CreateSolidCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1}
+  m_Offset: {x: 0.048173904, y: -0.95182705}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -193,7 +193,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12, y: 12}
+  m_Size: {x: 14.31229, y: 14.215944}
   m_EdgeRadius: 0
 --- !u!1 &1548756762732748
 GameObject:
@@ -269,7 +269,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -283450961
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 2ea2c1ba22f4440b3ba5cae276e4811e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
