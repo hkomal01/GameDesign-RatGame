@@ -41,6 +41,7 @@ public class shooterOneScript : MonoBehaviour
     public enemyTrigger areaTrig;
 
 
+    private bool knockback;
 
     private void Awake()
     {
@@ -53,6 +54,7 @@ public class shooterOneScript : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Entity").transform;
         dead = false;
         trig = false;
+        knockback = false;
     }
 
     // Update is called once per frame
@@ -95,6 +97,9 @@ public class shooterOneScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (knockback)
+            Knockback();
+
         if(target) {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
@@ -113,8 +118,15 @@ public class shooterOneScript : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         // print("damage");
+        knockback = true;
+        // moveDirection = rb.transform.position - target.position;
+        // rb.AddForce(moveDirection.normalized * -300f);
+    }
+
+    private void Knockback() {
         moveDirection = rb.transform.position - target.position;
-        rb.AddForce(moveDirection.normalized * -300f);
+        rb.AddForce(moveDirection.normalized * -5000f);
+        knockback = false;
     }
 
     void shoot()
