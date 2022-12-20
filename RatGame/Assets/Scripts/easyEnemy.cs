@@ -51,6 +51,8 @@ public class easyEnemy : MonoBehaviour
     public enemyTrigger areaTrig;
 
 
+    private bool knockback;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -64,6 +66,7 @@ public class easyEnemy : MonoBehaviour
     {
         target = GameObject.Find("Player").transform;
         trig = false;
+        knockback = false;
     }
 
     // Update is called once per frame
@@ -124,6 +127,9 @@ public class easyEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (knockback)
+            Knockback();
+
         if(target) {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
@@ -132,6 +138,8 @@ public class easyEnemy : MonoBehaviour
     }
 
     void LateUpdate() {
+        // if (knockback)
+        //     Knockback();
         UpdateSprite();
     }
 
@@ -144,13 +152,21 @@ public class easyEnemy : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        
+        knockback = true;
         // Debug.Log("Health: " + PlayerPrefs.GetFloat("Health"));
-        moveDirection = rb.transform.position - target.position;
+        // moveDirection = rb.transform.position - target.position;
         // Debug.Log("direction: " + moveDirection.normalized);
 
-        rb.AddForce(moveDirection.normalized * -300f);
+        // rb.AddForce(moveDirection.normalized * -300f);
 
+    }
+    
+    private void Knockback() {
+        moveDirection = rb.transform.position - target.position;
+        // rb.drag = 1000;
+        rb.AddForce(moveDirection.normalized * -1000f, ForceMode2D.Impulse);
+        // rb.drag = 0;
+        knockback = false;
     }
 
     // void shoot()
