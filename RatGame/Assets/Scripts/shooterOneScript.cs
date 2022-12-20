@@ -40,6 +40,8 @@ public class shooterOneScript : MonoBehaviour
     private bool trig;
     public enemyTrigger areaTrig;
 
+    private GameObject p;
+    public string wep;
 
     private bool knockback;
 
@@ -55,11 +57,19 @@ public class shooterOneScript : MonoBehaviour
         dead = false;
         trig = false;
         knockback = false;
+
+        p = GameObject.FindWithTag("Entity");
+        wep = "";
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (p.GetComponent<Player>().weapon != null){
+            wep = p.GetComponent<Player>().weapon.gunName;
+        }
+
         trig = areaTrig.trigger;
 
         if (trig) 
@@ -97,7 +107,7 @@ public class shooterOneScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (knockback)
+        if (knockback && wep != "ThunderGun")
             Knockback();
 
         if(target) {
