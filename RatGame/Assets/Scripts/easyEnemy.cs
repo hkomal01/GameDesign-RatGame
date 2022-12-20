@@ -163,8 +163,9 @@ public class easyEnemy : MonoBehaviour
     
     private void Knockback() {
         moveDirection = rb.transform.position - target.position;
-
+        // rb.drag = 1000;
         rb.AddForce(moveDirection.normalized * -1000f, ForceMode2D.Impulse);
+        // rb.drag = 0;
         knockback = false;
     }
 

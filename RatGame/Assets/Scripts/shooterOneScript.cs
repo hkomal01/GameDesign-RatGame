@@ -125,7 +125,9 @@ public class shooterOneScript : MonoBehaviour
 
     private void Knockback() {
         moveDirection = rb.transform.position - target.position;
+        // rb.drag = 100;
         rb.AddForce(moveDirection.normalized * -5000f);
+        // rb.drag = 0;
         knockback = false;
     }
 
