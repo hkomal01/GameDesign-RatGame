@@ -70,7 +70,7 @@ public class TutorialUI : MonoBehaviour
                     waitTime -= Time.deltaTime;
                 } else {
                     Tutorial();
-                    text.text = "door is located on side of the map and will open when all the enemies are killed, the crates are destructibles!";
+                    text.text = "door is located on side of the map and will open when all the enemies are killed";
                     tutorialUI.SetActive(true);
                     tutorialIndex++;
                     waitTime = .01f;
