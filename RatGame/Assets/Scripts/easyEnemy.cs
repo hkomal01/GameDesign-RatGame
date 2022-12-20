@@ -50,6 +50,8 @@ public class easyEnemy : MonoBehaviour
     private bool trig;
     public enemyTrigger areaTrig;
 
+    private GameObject p;
+    public string wep;
 
     private bool knockback;
 
@@ -67,11 +69,18 @@ public class easyEnemy : MonoBehaviour
         target = GameObject.Find("Player").transform;
         trig = false;
         knockback = false;
+
+        p = GameObject.FindWithTag("Entity");
+        wep = "";
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (p.GetComponent<Player>().weapon != null){
+            wep = p.GetComponent<Player>().weapon.gunName;
+        }
+        
         timer += Time.deltaTime;
         // Debug.Log("x_pos1:  " + last_update.x);
         // Debug.Log("x_pos2:  " + transform.position.x + "\n");
@@ -127,7 +136,7 @@ public class easyEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (knockback)
+        if (knockback && wep != "ThunderGun")
             Knockback();
 
         if(target) {
