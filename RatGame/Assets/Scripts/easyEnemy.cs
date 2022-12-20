@@ -146,6 +146,8 @@ public class easyEnemy : MonoBehaviour
     {
         
         // Debug.Log("Health: " + PlayerPrefs.GetFloat("Health"));
+        moveDirection = rb.transform.position - target.position;
+        rb.AddForce(moveDirection.normalized * -500f);
 
     }
 
@@ -156,6 +158,7 @@ public class easyEnemy : MonoBehaviour
     //     fired.owner = owner;
     //     Destroy(fired.gameObject, bulletLife);
     // }
+
 
     public void Die()
     {

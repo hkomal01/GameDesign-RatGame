@@ -117,10 +117,10 @@ public class Player : Actor {
 
  		entities = GameObject.FindGameObjectsWithTag("Entities");	
 		if (entities.Length == 0)
-			if (SceneManager.GetActiveScene().name == "Level-3-5")
-            	SceneManager.LoadScene("Win");
-			else 
-				unlock_door(); 
+			// if (SceneManager.GetActiveScene().name == "Level-3-5")
+            // 	SceneManager.LoadScene("Win");
+			// else 
+			unlock_door(); 
 	}
 
 	void unlock_door() {
